@@ -1,0 +1,16 @@
+.wrapper{
+	height: 883px;
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.box{
+	display: inline-block;
+}
+.box a{
+	display: block;
+}
+.box span{
+	display: block;
+}
