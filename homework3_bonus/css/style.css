@@ -4,13 +4,20 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
+.content{
+	margin: 0 auto;
+	width: 800px;
+}
 .box{
 	display: inline-block;
+	padding: 0 auto;
 }
 .box a{
 	display: block;
 }
 .box span{
 	display: block;
+	color: #fff;
+	font-weight: bold;
+
 }
