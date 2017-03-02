@@ -1,23 +1,77 @@
+body{
+	font-family: Tahoma;
+	font-size: 10pt;
+}
 .wrapper{
 	height: 883px;
 	background-image: url(../img/background.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	color: #fff;
+}
+.header{
+	height: 210px;
+}
+.contact{
+	float: right;
+	width: 200px;
+	margin: 150px 300px 0 0;
+}
+.logo{
+	position: absolute;
+	float: left;
+	margin: 0 230px;
+}
+.logo .palm{
+	display: block;
+	position: relative;
+	left: 140px;
+	top: 21px;
+}
+.logo .logo_img{
+	display: block;
+	position: relative;
+	top: 133px;
+
+}
+.logo .slog{
+	display: block;
+	position: relative;
+	text-align: center;
+
 }
 .content{
+	clear: both;
 	margin: 0 auto;
-	width: 800px;
+	width: 836px;
 }
 .box{
 	display: inline-block;
-	padding: 0 auto;
+	margin: 0 8px 56px;
+	width: 260px;
 }
 .box a{
 	display: block;
+	background-color: #fff;
+	height: 178px;
+	width: 260px;
+	border: 2px solid #aaa;
 }
+
+.box img:hover{
+	
+	opacity: .5;
+}
+
 .box span{
+	margin-top: 3px;
 	display: block;
 	color: #fff;
 	font-weight: bold;
+	text-align: center;
 
+}
+footer{
+	text-align: center;
+	padding-top: 105px;
 }
