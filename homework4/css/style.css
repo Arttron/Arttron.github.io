@@ -1,0 +1,49 @@
+body{
+	background-image: url(../img/background.jpg);
+	background-position: 0 -38px;
+}
+footer span{
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+}
+.wrapper{
+	width: 1000px;
+	height: 988px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow: 5px 10px 10px #000;
+}
+.menu a{
+	display: block;
+	padding: 0 15px;
+	text-decoration: none;
+	line-height: 27px;
+	color: #fff;
+}
+ul.menu{
+	display: block;
+	background-color: #363636;
+	box-shadow: 0 5px 10px #000;
+}
+ul.menu>li{
+	display: inline-block;	
+}
+ul.submenu{
+	display: none;
+}
+.blokWrapper{
+	margin: 10px 0;
+}
+.blok1{
+	float: left;
+	width: 208px;
+}
+.blok2{
+	display: inline-block;
+	width: 584px;
+}
+.blok3{
+	float: right;
+	width: 208px;
+}
