@@ -15,12 +15,12 @@ body{
 .contact{
 	float: right;
 	width: 200px;
-	margin: 150px 300px 0 0;
+	margin: 150px 15% 0 0;
 }
 .logo{
 	position: absolute;
 	float: left;
-	margin: 0 230px;
+	margin: 0 17%;
 }
 .logo .palm{
 	display: block;
