@@ -13,11 +13,20 @@ header{
 	height: 175px;
 }
 .contact{
+	height: 56px;
 	float: right;
-	margin: 10px 33px 35px 0px;
+	margin: 11px 33px 45px 0px;
+	color: #128aa7;
+	font-size: 12px;
 }
 .contact span{
 	display: block;
+	margin: 7px 0;
+}
+.contact h3{
+	font-weight: 900;
+	color: #128aa7;
+	font-size: 12px;
 }
 .wrapper{
 	width: 1000px;
@@ -28,7 +37,7 @@ header{
 }
 .logo{
 	position: relative;
-	margin-top: 10px;
+	margin-top: 12px;
 	margin-left: 28px;
 	float: left;
 	height: 164px;
@@ -36,13 +45,16 @@ header{
 .logo span{
 	position: absolute;
 	top: 100px;
-	left: 50px;
+	left: 72px;
 	font-family: Tahoma;
 	color: #128aa7;
 	font-size: 12px;
 }
 .foto img{
 	border-top: 1px solid #128aa7;
+	border-bottom: 1px solid #128aa7;
+	vertical-align: middle;
+
 }
 .contries{
 	margin: 0px 33px 0px 0px;
@@ -53,7 +65,7 @@ header{
 }
 .contries li{
 	display: inline-block;
-	margin-left: 16px; 
+	margin-left: 6px; 
 }
 .contries li img{
 	display: block;
@@ -68,61 +80,105 @@ header{
 }
 .menu a{
 	display: block;
-	padding: 0 15px;
+	padding-left: 10px;
 	text-decoration: none;
 	line-height: 27px;
+	font-size: 14px;
 	color: #fff;
 }
 ul.menu{
+	position: relative;
 	display: block;
+	box-sizing: border-box;
 	background-color: #363636;
-	box-shadow: 0 5px 10px #000;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #cacbcb;
+	box-shadow: 0 3px 5px #323232;
+	z-index: 1000;
 }
 ul.menu>li{
 	display: inline-block;	
+	position: relative;
+	width: 13.8%;
+	text-align: center;
+}
+ul.menu>li.sm>a::after{
+	content: "";
+	margin-left: 10px;
+	display: inline-block;
+	border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 6px solid #fff;
 }
 ul.submenu{
+	float: none;
+	border-top: 1px solid #000;
+	position: absolute;
+	background-color: #363636;
 	display: none;
+	box-shadow: 0 0 5px #000;
+}
+ul.submenu:hover{
+	display: block;
+}
+ul.submenu>li>a{
+	display: block;
+	margin: 2px 5px;
+	font-size: 14px;
+	width: 150px;
+}
+ul.submenu>li{
+	display: block;
+	vertical-align: top;
+}
+ul.menu>li:hover>ul.submenu{
+	display: block;
 }
 .blokWrapper{
-	margin-top: 10px;
 	overflow: hidden;
+	height: 547px;
 }
 .blokWrapper h3{
 	text-align: center;
 	font-weight: bold;
-
+	margin: 12px 0 5px; 
 }
 .blokWrapper p{
 	line-height: 24px;
 	font-size: 14px;
+	position: relative;
+
 }
 .blok1{
 	float: left;
 	display: block;
-	width: 208px;
+	width: 177px;
+	padding: 0 13px;
 	background-color: #edeef0;
+	border-right: 1px solid #c7cacf;
 	padding-bottom: 2000px;
 	margin-bottom: -2000px;
-
 }
 .blok2{
 	float: left;
-	width: 584px;
-	height: 500px;
+	width: 592px;
+	height: 548px;
 	padding-bottom: 2000px;
 	margin-bottom: -2000px;
-
+	position: relative;
 }
 
 .blok3{
 	float: left;
-	width: 208px;
+	width: 177px;
+	padding: 0 13px;
+	border-left: 1px solid #c7cacf;
 	background-color: #edeef0;
 	padding-bottom: 2000px;
 	margin-bottom: -2000px;
 
 }
 .copy{
-	line-height: 30px
+	line-height: 34px;
+	font-size: 12px;
 }

@@ -2,12 +2,6 @@ body {
 	background-color: #f9f9f9;
 	font-family: 'Open Sans', sans-serif;
 }
-body>img{
-	position: absolute;
-	top:2px;
-	left:28px;
-	opacity: .5;
-}
 .wrapper {
 	margin: 0px auto;
 	width: 1060px;
@@ -28,6 +22,7 @@ body>img{
 }
 .menu li {
 	list-style: none;
+	margin: 0px 37px 0px 1px;
 	float: left;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
@@ -38,9 +33,9 @@ body>img{
 	background-color: RGBA(0, 0, 0, 0.2);
 }
 .menu li a {
+	padding: 0px 23px;
 	text-decoration: none;
 	display: inline-block;
-	padding: 0px 40px 0px 30px;
 	color:#ffffff;
 	text-shadow: 1px 1px 1px #000;
 	line-height: 40px;
@@ -48,15 +43,16 @@ body>img{
 }
 .Left_menu {
 	float: left;
-	width: 23%;
-	margin-left: 46px;
+	width: 240px;
+	margin-left: 47px;
 }
 .Left_menu ul a {
+	height: 39px;
 	color: #000;
 	text-decoration: none;
 	display: block;
 	border: 1px solid #CCCCCC;
-	padding: 0px 15px;
+	padding: 0px 22px;
 	border-bottom: 0;
 	transition-property: padding;
 	transition: padding 0.3s linear;
@@ -67,21 +63,21 @@ body>img{
 	border-bottom: 1px solid #CCCCCC;
 }
 .Left_menu ul a:hover{
-	padding: 0px 10px 0px 25px;
+	padding-left: 34px;
 	font-weight: 900;
 }
 .content {
 	float :left;
 	width: 64%;
-	margin-left: 45px;
+	margin-left: 48px;
 }
 .content img {
-	height: 290px;
-	padding: 8% 15%;
+	height: 300px;
+	padding: 49px 94px;
 	border: 1px solid #c8c8c8;
 }
 .content p {
-	margin-left: 23px;
+	margin-left: 24px;
 	margin-top: 31px;
 	line-height: 16pt;
 	font-size: 10pt;
@@ -93,7 +89,7 @@ body>img{
 .f_menu ul li {
 	display: inline-block;
 	list-style: none;
-	margin: 0 5px 0  40px;
+	margin: 0 64px 0  25px;
 }
 .f_menu ul li a {
 	color: #000;
@@ -107,7 +103,8 @@ body>img{
 }
 .copy_r {
 	float: right;
-	margin-right: 40px;
+	margin-right: 26px;
 	line-height: 40px;
 	font-size: 10pt;
+	letter-spacing: -0.2px;
 }
