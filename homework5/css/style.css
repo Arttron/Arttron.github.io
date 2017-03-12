@@ -1,0 +1,58 @@
+header{
+	height: 36px;
+	background-color: #085b9f;
+}
+.uLine{
+	text-decoration: underline;
+}
+header div{
+	float: right;
+}
+ul.menu{
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+}
+.menu li{
+	display: inline-block;
+}
+header a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	line-height: 36px;
+	margin: 0 5px;
+}
+header span{
+	display: inline-block;
+	line-height: 36px;
+	vertical-align: top;
+}
+header img{
+	vertical-align: middle;
+	display: inline-block;
+}
+span.v_line{
+	width: 1px;
+	height: 36px;
+	background-color: #fff;
+}
+main{
+	background-image: url("../img/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1215px;
+	position: relative;
+	z-index: 900;
+	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+}
+.registration_form{
+	width: 559px;
+	height: 610px;
+	position: relative;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
+}
