@@ -15,13 +15,25 @@ ul.menu{
 }
 .menu li{
 	display: inline-block;
+	box-sizing: border-box;
+}
+.topMenuHov{
+	box-sizing: border-box;
+}
+
+.topMenuHov:hover, .menu a:hover{
+	background-color: #4eabda;
+	color: #fff;
+}
+.menu a{
+	display: inline-block;
+	text-decoration: none;
+	color: #60b5ed;
+	line-height: 36px;
+	padding: 0 12px;
 }
 header a{
-	display: block;
-	text-decoration: none;
 	color: #fff;
-	line-height: 36px;
-	margin: 0 5px;
 }
 header span{
 	display: inline-block;
@@ -32,10 +44,14 @@ header img{
 	vertical-align: middle;
 	display: inline-block;
 }
+span.c_wite{
+	color: #fff;
+}
 span.v_line{
 	width: 1px;
-	height: 36px;
-	background-color: #fff;
+	height: 32px;
+	margin-top: 2px;
+	background-color: #56a2dc;
 }
 main{
 	background-image: url("../img/background.png");
@@ -55,4 +71,52 @@ main{
 	z-index: 1000;
 	background-color: rgba(0, 0, 0, 0.5);
 	margin: 0 auto;
+}
+.h_line{
+	display: block;
+	height: 3px;
+	background-color: #d4d8c9;
+}
+.registration_form h1{
+	color: #fff;
+	text-align: center;
+	line-height: 62px;
+	font-size: 24px;
+}
+.OU_line{
+	display: block;
+	text-align: center;
+}
+.OU_line::before{
+	display: inline-block;
+	margin: 4px 2px;
+	content: "";
+	width: 30px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #000;
+}
+.OU_line::after{
+	display: inline-block;
+	margin: 4px 2px;
+	content: "";
+	width: 30px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #000;
+}
+input.t_input{
+	margin: 0 auto 20px;
+	display: block;
+	height: 35px;
+	width: 275px;
+	outline: none;
+	padding-left: 12px; 
+	background-color: #101010;
+	border: none;
+	border-bottom: 1px solid #484848;
+	color: #fff;
+
+}
+input.t_input:focus{
+	box-shadow: 0 0 15px #4a84ad;
+	
 }
