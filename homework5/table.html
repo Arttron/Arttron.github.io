@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table.my_table{
+			border-collapse: collapse;
+			width: 8cm;
+
+		}
+		.my_table td{
+			width: 1cm;
+			/*height: 1cm;*/
+			border: 3px solid #000;
+			
+		}	
+		.my_table tr{
+			/*width: 1cm;*/
+			height: 1cm;
+		}	
+		.hid{
+			border: 1px;
+		}
+		.duble_heighth{
+			height: 2cm;
+		}
+		.bg_black{
+			background-color: black;
+		}
+		.bg_yellow{
+			background-color: yellow;
+		}
+		.bg_blue{
+			background-color: blue;
+		}
+		.bg_red{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<table class="my_table">
+
+		<tr>
+			<td colspan="2"></td>
+			<td colspan="3"></td>
+			<td class="bg_yellow" colspan="2"></td>
+		</tr>
+
+		<tr>
+			<td rowspan="2"></td>
+			<td class="bg_red" colspan="4" rowspan="4"></td>
+			<td class="bg_yellow" rowspan="2" colspan="2"></td>
+		</tr>
+
+		<tr>
+		</tr>
+
+		<tr>
+			<td rowspan="3"></td>
+			<td rowspan="2"></td>
+			<td rowspan="2"></td>
+		</tr>
+
+		<tr>
+		</tr>
+
+		<tr>
+			<td class="bg_black" rowspan="2" colspan="2"></td>
+			<td colspan="2"></td>
+			<td colspan="2"></td>
+		</tr>
+		<tr>
+			<td class="bg_yellow" rowspan="3"></td>
+			<td colspan="2"></td>
+			<td class="bg_blue" colspan="2" rowspan="2"></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" rowspan="2"></td>
+			<td class="bg_black" colspan="2"></td>
+		</tr>
+
+		<tr>
+			<td colspan="4"></td>
+		</tr>
+
+	</table>
+</body>
+</html>
