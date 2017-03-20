@@ -1,0 +1,13 @@
+body {
+  background: #faa;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  color: #000;
+  border: 1px solid #fff;
+}

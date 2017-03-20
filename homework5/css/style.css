@@ -2,6 +2,12 @@ body{
 	font-family: Tahoma;
 	font-size: 14px;
 	min-height: 100vh;
+	background-image: url("../img/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-content: center;
+	flex-direction: column;
 }
 header{
 	height: 36px;
@@ -72,24 +78,26 @@ span.v_line{
 	background-color: #56a2dc;
 }
 main{
-	background-image: url("../img/background.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+	/*background-image: url("../img/background.png");*/
+	/*background-repeat: no-repeat;
+	background-size: cover;*/
 
 	position: relative;
 	z-index: 900;
 	display: flex;
  	flex-direction: column;
  	justify-content: center;
+ 	align-content: : center;
 }
 .registration_form{
 	width: 559px;
-	min-height: 500px;
-	max-height: 610px;
 	position: relative;
 	z-index: 1000;
 	background-color: rgba(0, 0, 0, 0.5);
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 .h_line{
 	display: block;
@@ -187,7 +195,7 @@ input.textInput:focus::-webkit-input-placeholder{
 	color:#fff;
 }
 .registration_form>p{
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	text-align: center;
 	font-size: 11px;
 	color: #fff;
