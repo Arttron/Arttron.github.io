@@ -1,13 +1,113 @@
+@charset "UTF-8";
 body {
-  background: #faa;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: "Fontello";
+  src: url("../font/fontello.ttf");
+}
+
+header, main, footer {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 1000px;
 }
 
-.menu {
+.icon-phone-circled {
+  color: #001529;
+}
+
+.cIcon {
+  font-family: "Fontello";
+}
+
+.floatBox {
+  float: left;
+}
+
+.floatBox div {
+  display: inline;
+  float: left;
+}
+
+.floatBox input {
+  width: 60px;
+}
+
+nav.menu {
   color: #000;
   border: 1px solid #fff;
+  height: 30px;
+  display: block;
+}
+
+nav.menu div {
+  display: inline-block;
+}
+
+nav.menu ul {
+  display: inline-block;
+}
+
+nav.menu li {
+  display: inline-block;
+  margin: 0;
+}
+
+nav.menu li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  border-radius: 40%;
+  line-height: 30px;
+  padding: 0 5px;
+}
+
+nav.menu li a:hover {
+  background-color: #0f0;
+}
+
+div.containerProd {
+  display: flex;
+  flex-direction: row;
+}
+
+div.containerProd .catalogProduct {
+  background-color: #f00;
+  min-width: 180px;
+}
+
+div.containerProd .prevProduct {
+  background-color: #0f0;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  min-width: 414px;
+}
+
+div.containerProd .prevProduct .productCard {
+  width: 138px;
+  height: 185px;
+  background-color: #ff0;
+  margin: 2px 10px;
+}
+
+div.containerProd .prevProduct .productCard .costProduct:after {
+  content: ".00 грн.";
+}
+
+div.containerProd .brands {
+  background-color: #00f;
+  min-width: 190px;
 }

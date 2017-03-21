@@ -2,24 +2,118 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fontello.css">
 	<link rel="stylesheet" href="css/style.css">
-
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 <body>
 	<div class="wrapper">
 		<header>
-		<div class="contact">
-			<object data="img/1.svg"></object>
-		</div>
-		<div class="myForm"></div>
-		<div class="cIcon"></div>
-		<div class="clear"></div>
-		<img src="img/blick.jpg" alt="">
+			<div class="floatBox">
+			<div class="phon">
+				<!-- <object data="img/1.svg"></object> -->
+				<span class="icon-phone-circled">(044)123-45-67 (044)567-89-10</span>
+			</div>
+			<div class="myForm">
+				<form action="">
+					<span class="icoUser"></span>
+					<input type="text">
+					<input type="text">
+					<a href="">Вход</a>
+					<a href="">Регистрация</a>
+					<a href="" class="fGray">Забыли пароль?</a>
+				</form>
+			</div>
+			<div class="cIcon">
+				<span class="icon-home-outline"></span>
+				<span class="icon-mail"></span>
+				<span class="icon-sitemap"></span>
+			</div>
+			</div>
+			<div class="clear"></div>
+			<img src="img/blick.jpg" alt="">
 		</header>
 		<main>
-			
+			<nav class="menu">
+				<ul>
+					<li><a href="#">О компании</a>
+					<li><a href="#">Оплата</a>
+					<li><a href="#">Доставка</a>
+					<li><a href="#">Статьи</a>
+					<li><a href="#">Контакты</a>
+				</ul>
+				<div class="bask"><span class="icoBask">Товаров:<span id="qProduct">0</span> на сумму: <span id="summ">0</span></span></div>
+			</nav>
+			<div class="filterBlock">
+				
+			</div>
+			<div class="containerProd">
+			<section class="catalogProduct">
+				<h2>Каталог продукции</h2>
+				<p>Шины</p>
+				<ul>
+					<li><a href="#">Наименование 1</a></li>
+					<li><a href="#">Наименование 2</a></li>
+					<li><a href="#">Наименование 3</a></li>
+					<li><a href="#">Наименование 4</a></li>
+				</ul>
+				<p>Диски</p>
+				<ul>
+					<li><a href="#">Наименование 1</a></li>
+					<li><a href="#">Наименование 2</a></li>
+					<li><a href="#">Наименование 3</a></li>
+					<li><a href="#">Наименование 4</a></li>
+				</ul>
+				<p>Болты</p>
+				<ul>
+					<li><a href="#">Наименование 1</a></li>
+					<li><a href="#">Наименование 2</a></li>
+					<li><a href="#">Наименование 3</a></li>
+					<li><a href="#">Наименование 4</a></li>
+				</ul>
+			</section>
+			<section class="prevProduct">
+				<div class="productCard">
+					<p class="brand"></p>
+					<p class="desc"></p>
+					<img src="img/tovar/prod_01.jpg" alt="">
+					<p class="costProduct">90</p>
+				</div>
+				<div class="productCard">
+					<p class="brand"></p>
+					<p class="desc"></p>
+					<img src="img/tovar/prod_01.jpg" alt="">
+					<p class="costProduct">115</p>
+				</div>
+				<div class="productCard">
+					<p class="brand"></p>
+					<p class="desc"></p>
+					<img src="img/tovar/prod_02.jpg" alt="">
+					<p class="costProduct">393</p>
+				</div>
+			</section>
+			<sectin class="brands">
+				<h2>Бренды</h2>
+				<form action="">
+					<h3>Шины</h3>
+					<input type="checkbox" id="shCheck1">
+					<lable for="shCheck1">Бренд 1</lable>
+					<input type="checkbox" id="shCheck2">
+					<lable for="shCheck2">Бренд 2</lable>
+					<input type="checkbox" id="shCheck3">
+					<lable for="shCheck3">Бренд 3</lable>
+					<h3>Диски</h3>
+					<input type="checkbox" id="dCheck1">
+					<lable for="dCheck1">Бренд 1</lable>
+					<input type="checkbox" id="dCheck2">
+					<lable for="dCheck2">Бренд 2</lable>
+					<input type="checkbox" id="dCheck3">
+					<lable for="dCheck3">Бренд 3</lable>
+					<input type="button">
+				</form>
+			</sectin>
+			</div>
 		</main>
 	</div>
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
