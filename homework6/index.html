@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/fontello.css">
 	<link rel="stylesheet" href="css/style.css">
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -12,23 +11,27 @@
 		<header>
 			<div class="floatBox">
 			<div class="phon">
-				<!-- <object data="img/1.svg"></object> -->
-				<span class="icon-phone-circled">(044)123-45-67 (044)567-89-10</span>
+				<object data="img/svg/001-phone-symbo.svg"></object>
+				<span>(044)123-45-67 (044)567-89-10</span>
 			</div>
-			<div class="myForm">
-				<form action="">
-					<span class="icoUser"></span>
+			<div >
+				<form class="entryForm" action="">
+					<div>
+						<img class="icoUser" src="img/svg/006-user-o.svg" alt="">
+						<input type="text">
+					</div>
 					<input type="text">
-					<input type="text">
-					<a href="">Вход</a>
-					<a href="">Регистрация</a>
+					<div>
+						<a class="enterLink" href="">Вход</a>
+						<a href="">Регистрация</a>
+					</div>
 					<a href="" class="fGray">Забыли пароль?</a>
 				</form>
 			</div>
 			<div class="cIcon">
-				<span class="icon-home-outline"></span>
-				<span class="icon-mail"></span>
-				<span class="icon-sitemap"></span>
+				<a href=""><img src="img/svg/004-house-outline.svg"></img></a>
+				<a href=""><img src="img/svg/002-connection.svg"></img></a>
+				<a href=""><img src="img/svg/003-envelope.svg"></img></a>
 			</div>
 			</div>
 			<div class="clear"></div>
@@ -43,79 +46,190 @@
 					<li><a href="#">Статьи</a>
 					<li><a href="#">Контакты</a>
 				</ul>
-				<div class="bask"><span class="icoBask">Товаров:<span id="qProduct">0</span> на сумму: <span id="summ">0</span></span></div>
+				<div class="bask">
+				<span class="icoBask">
+					<img src="img/svg/007-shopping-cart.svg" alt="">Товаров:<span id="qProduct">0</span> на сумму: <span id="summ">0.00</span>
+				</span>
+				</div>
 			</nav>
 			<div class="filterBlock">
-				
+				<form class="findAuto borderEl" action="">
+						<h3 class="centerText">Поиск по автомобилю</h3>
+					<div>
+						<h4>Диски:</h4>
+						<p>Марка <span>авто</span>:</p><select name="" id="selAuto1"></select>
+						<p>Модель <span>автомобиля</span></p><select name="" id="selAuto2"></select>
+						<p>Год выпуска <span>автомобиля</span></p><select class="selYear" name="" id="selAuto3"></select>
+						<p>Комплектация</p><select name="" id="selAuto4"></select>
+					</div>
+					<div>
+						<h4 class="alLeft">Шины:</h4>
+						<p>Марка <span>авто</span>:</p><select name="" id="selAuto5"></select>
+						<p>Модель <span>автомобиля</span></p><select name="" id="selAuto6"></select>
+						<p>Год выпуска <span>автомобиля</span></p><select class="selYear" name="" id="selAuto7"></select>
+						<p>Комплектация</p><select name="" id="selAuto8"></select>
+					</div>
+					<div class="clear"></div>
+					<a href="">ПОИСК...</a>
+				</form>
+				<form  class="findBr borderEl" action="">
+					<h3>ПОИСК ШИН</h4>
+					<p>Размер:</p><select name="" id="selBr1"></select>
+					<span>/</span><select name="" id="selBr2"></select>
+					<p>R</p><select name="" id="selBr3"></select>
+					<div class="chBoxP">
+					<p>Сезон:</p>
+					<div>
+						<label for="chekBr1"><input type="checkbox" id="chekBr1">лето</label>
+						<label for="chekBr2"><input type="checkbox" id="chekBr2">зима</label>
+						<label for="chekBr3"><input type="checkbox" id="chekBr3">всесез</label>
+					</div>
+					</div>
+					<div class="clear"></div>
+					<a href="">ПОИСК...</a>
+				</form>
+				<form class="findDisc borderEl" action="">
+					<div class="fdL">
+						<h3>ПОИСК ДИСКОВ</h4>
+						<p>Диаметр <span>диска</span></p><select name="" id="selDisc1"></select>
+						<p>Количество <span>крепёжных отверстий</span></p><select name="" id="selDisc2"></select>
+						<p>Диаметр <span>расположения крепёжных отверстий</span></p><select name="" id="selDisc3"></select>
+					</div>
+					<div class="fdR">
+						<p>ДЦО <br> <span>(диаметр центрального отверстия)</span></p><select name="" id="selDisc4"></select>
+						<p>ET <br><span>(вылет диска)</span></p><select name="" id="selDisc5"></select>
+					</div>
+					<div class="clear"></div>
+					<a href="">ПОИСК...</a>
+				</form>
 			</div>
 			<div class="containerProd">
 			<section class="catalogProduct">
-				<h2>Каталог продукции</h2>
-				<p>Шины</p>
+
+				<h2 class="boxSideDecoration icon-phone-circled" ><img class="" src="img/svg/005-list.svg"></img>Каталог продукции</h2>
+				<p class="boxSideDecoration cirkle" >Шины</p>
 				<ul>
-					<li><a href="#">Наименование 1</a></li>
-					<li><a href="#">Наименование 2</a></li>
-					<li><a href="#">Наименование 3</a></li>
-					<li><a href="#">Наименование 4</a></li>
+					<li>Наименование 1<a href="#"></a></li>
+					<li>Наименование 2<a href="#"></a></li>
+					<li>Наименование 3<a href="#"></a></li>
+					<li>Наименование 4<a href="#"></a></li>
 				</ul>
-				<p>Диски</p>
+				<p class="boxSideDecoration cirkle" >Диски</p>
 				<ul>
-					<li><a href="#">Наименование 1</a></li>
-					<li><a href="#">Наименование 2</a></li>
-					<li><a href="#">Наименование 3</a></li>
-					<li><a href="#">Наименование 4</a></li>
+					<li>Наименование 1<a href="#"></a></li>
+					<li>Наименование 2<a href="#"></a></li>
+					<li>Наименование 3<a href="#"></a></li>
+					<li>Наименование 3<a href="#"></a></li>
 				</ul>
-				<p>Болты</p>
+				<p class="boxSideDecoration cirkle" >Болты</p>
 				<ul>
-					<li><a href="#">Наименование 1</a></li>
-					<li><a href="#">Наименование 2</a></li>
-					<li><a href="#">Наименование 3</a></li>
-					<li><a href="#">Наименование 4</a></li>
+					<li>Наименование 1<a href="#"></a></li>
+					<li>Наименование 2<a href="#"></a></li>
+					<li>Наименование 3<a href="#"></a></li>
+					<li>Наименование 4<a href="#"></a></li>
 				</ul>
 			</section>
 			<section class="prevProduct">
 				<div class="productCard">
-					<p class="brand"></p>
-					<p class="desc"></p>
-					<img src="img/tovar/prod_01.jpg" alt="">
-					<p class="costProduct">90</p>
+					<h4 class=" brand">Goodyear</h4>
+					<p class="desc">Ultra Grip Extreme</p>
+					<div class="cardImg"><img src="img/tovar/prod_01.jpg" alt=""></div>
+					<p class="costProduct">90.00</p>
 				</div>
 				<div class="productCard">
-					<p class="brand"></p>
-					<p class="desc"></p>
-					<img src="img/tovar/prod_01.jpg" alt="">
-					<p class="costProduct">115</p>
+					<h4 class="brand">Nokian</h4>
+					<p class="desc">Hakkapeliitta R</p>
+					<div class="cardImg"><img src="img/tovar/prod_01.jpg" alt=""></div>
+					<p class="costProduct">115.00</p>
 				</div>
 				<div class="productCard">
-					<p class="brand"></p>
-					<p class="desc"></p>
-					<img src="img/tovar/prod_02.jpg" alt="">
-					<p class="costProduct">393</p>
+					<h4 class="brand">Hankook</h4>
+					<p class="desc">K 708 155/65 R14 </p>
+					<div class="cardImg"><img src="img/tovar/prod_02.jpg" alt=""></div>
+					<p class="costProduct">393.00</p>
 				</div>
+				<div class="productCard">
+					<h4 class="brand">Goodyear</h4>
+					<p class="desc">Ultra Grip Extreme</p>
+					<div class="cardImg"><img src="img/tovar/prod_01.jpg" alt=""></div>
+					<p class="costProduct">90.00</p>
+				</div>
+				<div class="productCard">
+					<h4 class="brand">Nokian</h4>
+					<p class="desc">Hakkapeliitta R</p>
+					<div class="cardImg"><img src="img/tovar/prod_01.jpg" alt=""></div>
+					<p class="costProduct">115.00</p>
+				</div>
+				<div class="productCard">
+					<h4 class="brand">Hankook</h4>
+					<p class="desc">K 708 155/65 R14 </p>
+					<div class="cardImg"><img src="img/tovar/prod_02.jpg" alt=""></div>
+					<p class="costProduct">393.00</p>
+				</div>
+				<div class="productCard">
+					<h4 class="brand">Goodyear</h4>
+					<p class="desc">Ultra Grip Extreme</p>
+					<div class="cardImg"><img src="img/tovar/prod_01.jpg" alt=""></div>
+					<p class="costProduct">90.00</p>
+				</div>
+				<div class="productCard">
+					<h4 class="brand">Nokian</h4>
+					<p class="desc">Hakkapeliitta R</p>
+					<div class="cardImg"><img src="img/tovar/prod_01.jpg" alt=""></div>
+					<p class="costProduct">115.00</p>
+				</div>
+				<div class="productCard">
+					<h4 class="brand">Hankook</h4>
+					<p class="desc">K 708 155/65 R14 </p>
+					<div class="cardImg"><img src="img/tovar/prod_02.jpg" alt=""></div>
+					<p class="costProduct">393.00</p>
+				</div>
+				
 			</section>
 			<sectin class="brands">
-				<h2>Бренды</h2>
+			<h2 class="boxSideDecoration icon-phone-circled" ><img class="icon-phone-circled" src="img/svg/005-list.svg"></img>Бренды</h2>
 				<form action="">
-					<h3>Шины</h3>
-					<input type="checkbox" id="shCheck1">
-					<lable for="shCheck1">Бренд 1</lable>
-					<input type="checkbox" id="shCheck2">
-					<lable for="shCheck2">Бренд 2</lable>
-					<input type="checkbox" id="shCheck3">
-					<lable for="shCheck3">Бренд 3</lable>
-					<h3>Диски</h3>
-					<input type="checkbox" id="dCheck1">
-					<lable for="dCheck1">Бренд 1</lable>
-					<input type="checkbox" id="dCheck2">
-					<lable for="dCheck2">Бренд 2</lable>
-					<input type="checkbox" id="dCheck3">
-					<lable for="dCheck3">Бренд 3</lable>
-					<input type="button">
+					<h3 class="boxSideDecoration cirkle">Шины</h3>
+					<label for="shCheck1"><input type="checkbox" id="shCheck1"> Бренд 1</label>
+					<label for="shCheck2"><input type="checkbox" id="shCheck2"> Бренд 2</label>
+					<label for="shCheck3"><input type="checkbox" id="shCheck3"> Бренд 3</label>
+					<h3 class="boxSideDecoration cirkle">Диски</h3>
+					<label for="dCheck1"><input type="checkbox" id="dCheck1"> Бренд 1</label>
+					<label for="dCheck2"><input type="checkbox" id="dCheck2"> Бренд 2</label>
+					<label for="dCheck3"><input type="checkbox" id="dCheck3"> Бренд 3</label>
+					<input type="button" value="ВЫБРАТЬ">
 				</form>
 			</sectin>
+
 			</div>
+			<section class="brandsLogo">
+				<a href="#">
+					<img src="img/brands/08.png" alt=""></a>
+				<a href="#">
+					<img src="img/brands/07.png" alt=""></a>
+				<a href="#">
+					<img src="img/brands/06.png" alt=""></a>
+				<a href="#">
+					<img src="img/brands/05.png" alt=""></a>
+				<a href="#">
+					<img src="img/brands/04.png" alt=""></a>
+				<a href="#">
+					<img src="img/brands/03.png" alt=""></a>
+				<a href="#">
+					<img src="img/brands/02.png" alt=""></a>
+				<a href="#">
+					<img src="img/brands/01.png" alt=""></a>
+			</section>
 		</main>
+		<footer>
+			<ul class="fooMenu">
+				<li class="liVLine"><a href="">О компании</a></li>
+				<li class="liVLine"><a href="">Доставка</a></li>
+				<li class="liVLine"><a href="">Статьи</a></li>
+				<li><a href="">Контакты</a></li>
+			</ul>
+			<p class="createCo">Создание сайта &copy Global Vision</p>
+		</footer>
 	</div>
-		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
