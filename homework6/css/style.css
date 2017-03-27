@@ -21,11 +21,11 @@ header, main, footer {
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 902px;
 }
 
 header {
-  height: 291px;
+  height: 289px;
   display: flex;
   justify-content: center;
 }
@@ -34,25 +34,32 @@ header {
   border: 1px solid #c1c8cb;
   box-shadow: 0 0 3px #c1c8cb;
   border-radius: 10px;
+  width: 75px;
+  height: 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .cIcon img {
-  margin: 0 5px;
-  width: 15px;
+  margin: 0 4px;
+  width: 12px;
 }
 
 .entryForm {
   background: 1px linear-gradient(to top, #1f6787, #0c3357);
   border-radius: 3px;
   height: 25px;
-  width: 495px;
+  width: 460px;
   padding: 0px 15px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px #000;
   justify-content: space-around;
+}
+
+.entryForm div {
+  position: relative;
 }
 
 .entryForm a {
@@ -62,13 +69,24 @@ header {
   line-height: 25.46px;
 }
 
-.entryForm a.enterLink::after {
+.entryForm input[type="submit"] {
+  color: #fff;
+  background: transparent;
+  display: inline-block;
+  width: 30px;
+  font-size: 10.91px;
+  padding: 0;
+  font-family: 'lucidaSans';
+  cursor: pointer;
+}
+
+.entryForm .enterLink::before {
   content: "";
   background-color: #fff;
   width: 1px;
   display: inline-block;
-  height: 6px;
-  margin-left: 3px;
+  height: 10px;
+  margin-right: 5px;
   margin-top: 2px;
   position: relative;
   top: 1px;
@@ -83,7 +101,14 @@ header {
 }
 
 .entryForm .icoUser {
+  position: absolute;
+  left: -17px;
   height: 15px;
+}
+
+.entryForm .fGray {
+  color: #bfbfbf;
+  text-decoration: underline;
 }
 
 .floatBox {
@@ -98,11 +123,16 @@ header {
 
 .floatBox .phon object {
   color: #001529;
-  width: 20px;
+  width: 21px;
+  position: relative;
+  top: 3px;
+  left: 4px;
 }
 
 .floatBox .phon span {
-  vertical-align: top;
+  font-size: 19px;
+  color: #5e696d;
+  font-family: Arial;
   line-height: 20px;
 }
 
@@ -111,8 +141,8 @@ nav.menu {
   background: 1px linear-gradient(to bottom, #2a2e32, #020202);
   border: 1px solid #0a1030;
   border-radius: 3px;
-  box-shadow: 0 2px 5px #fff;
-  height: 30px;
+  box-shadow: 0 2px 5px #000, inset 0 1px 3px #fff;
+  height: 32px;
   display: flex;
   align-items: center;
   align-content: flex-end;
@@ -124,12 +154,12 @@ nav.menu div {
 
 nav.menu ul {
   display: inline-block;
-  margin-left: 125px;
+  margin-left: 127px;
 }
 
 nav.menu li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 8px;
 }
 
 nav.menu li a {
@@ -139,26 +169,28 @@ nav.menu li a {
   border-radius: 20px;
   line-height: 20px;
   color: #b1bcc0;
+  font-size: 14px;
   padding: 1px 5px;
 }
 
 nav.menu li a:hover {
   background: linear-gradient(to top, #0d3458, #1f6787);
+  color: #fff;
 }
 
 nav.menu .bask {
-  margin-left: 80px;
+  margin-left: 50px;
   color: #929b9f;
 }
 
 nav.menu .bask img {
   position: relative;
-  top: 5px;
+  top: 3px;
   margin-right: 2px;
 }
 
 nav.menu .bask span {
-  line-height: 30px;
+  line-height: 32px;
   font-size: 11px;
   vertical-align: top;
 }
@@ -166,12 +198,16 @@ nav.menu .bask span {
 nav.menu .bask #summ, nav.menu .bask #qProduct {
   color: #0d5a8f;
   font-size: 12px;
-  margin-right: 5px;
 }
 
 nav.menu .bask #summ::after {
   content: ".грн";
   vertical-align: top;
+}
+
+nav.menu .bask #qProduct {
+  text-align: center;
+  margin: 0 5px;
 }
 
 div.clear {
@@ -180,7 +216,7 @@ div.clear {
 
 div.filterBlock {
   position: relative;
-  height: 160px;
+  height: 157px;
   display: flex;
   justify-content: space-around;
   font-size: 9px;
@@ -202,6 +238,7 @@ div.filterBlock a {
   font-family: "Arial";
   display: block;
   text-align: right;
+  margin-right: 5px;
 }
 
 div.filterBlock h4 {
@@ -223,14 +260,14 @@ div.filterBlock .alLeft {
 
 div.filterBlock .borderEl {
   border: 1px solid #b8b8b9;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 1px 3px 5px #b8b8b9;
   margin: 10px 0;
   padding: 5px;
 }
 
 div.filterBlock .findAuto {
-  width: 45%;
+  width: 47%;
   position: relative;
 }
 
@@ -255,15 +292,13 @@ div.filterBlock .findAuto div {
 }
 
 div.filterBlock .findBr {
-  width: 18%;
+  width: 21%;
   margin: 10px;
 }
 
 div.filterBlock .findBr p {
   display: inline-block;
   width: 33px;
-  margin-right: 3px;
-  margin-left: 5px;
   text-align: right;
 }
 
@@ -276,9 +311,13 @@ div.filterBlock .findBr .chBoxP label {
   display: block;
 }
 
+div.filterBlock .findBr .chBoxP label input {
+  margin: 2px 3px;
+}
+
 div.filterBlock .findBr select {
   width: 50px;
-  margin: 3px 5px 0 10px;
+  margin: 2px 5px 0 5px;
 }
 
 div.filterBlock .findDisc {
@@ -303,13 +342,13 @@ div.filterBlock .findDisc p {
 }
 
 .boxSideDecoration {
-  height: 25px;
+  height: 26px;
   border: 1px solid #8c969a;
   border-radius: 12.5px;
   position: relative;
   padding-left: 25px;
   box-shadow: 0 1px 2px #8c969a;
-  line-height: 25px;
+  line-height: 26px;
   font-size: 14px;
   color: #114165;
   text-transform: uppercase;
@@ -318,8 +357,8 @@ div.filterBlock .findDisc p {
 .cirkle::before {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 3px;
+  left: 3px;
   margin-right: 6px;
   display: inline-block;
   border: 5px solid #114165;
@@ -330,7 +369,7 @@ div.filterBlock .findDisc p {
 
 .icon-phone-circled {
   position: relative;
-  margin: 5px 5px 10px;
+  margin: 5px 10px 14px;
   font-size: 12.73px;
   padding: 0;
 }
@@ -363,11 +402,11 @@ div.filterBlock .findDisc p {
 }
 
 .containerProd .catalogProduct {
-  min-width: 180px;
+  min-width: 190px;
 }
 
 .containerProd .catalogProduct p {
-  width: 80%;
+  width: 63%;
 }
 
 .containerProd .catalogProduct h2 {
@@ -377,9 +416,9 @@ div.filterBlock .findDisc p {
 .containerProd .catalogProduct ul li {
   position: relative;
   list-style: circle;
-  margin: 10px 0;
+  margin: 4px 0;
   color: #465961;
-  line-height: 18px;
+  line-height: 20px;
   font-size: 12.73px;
   margin-left: 45px;
 }
@@ -387,11 +426,10 @@ div.filterBlock .findDisc p {
 .containerProd .catalogProduct ul li:hover {
   color: #0c3256;
   font-size: 14px;
-  font-style: oblique;
+  font-style: italic;
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
-  letter-spacing: 0px;
 }
 
 .containerProd .catalogProduct ul li a {
@@ -408,46 +446,54 @@ div.filterBlock .findDisc p {
   flex-grow: 1;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  min-width: 414px;
+  justify-content: center;
+  width: 525px;
+  padding: 15px 0 6px;
+  border-radius: 3px;
 }
 
 .containerProd .prevProduct .productCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0 15px 0;
-  width: 138px;
-  height: 185px;
-  margin: 2px 10px;
+  display: block;
+  width: 137px;
+  height: 188px;
+  margin: 2px 15px 13px;
 }
 
 .containerProd .prevProduct .productCard .brand {
+  margin-top: 3px;
   color: #206988;
   font-size: 14.9px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .containerProd .prevProduct .productCard .desc {
+  letter-spacing: .5px;
   font-size: 12.77px;
+  text-align: center;
 }
 
 .containerProd .prevProduct .productCard .cardImg {
   background-color: #fff;
   width: 100%;
+  height: 127px;
   border: 1px solid #a7b1b4;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 .containerProd .prevProduct .productCard .cardImg img {
   display: block;
-  margin: 0 auto;
+  margin: 4px auto;
 }
 
 .containerProd .prevProduct .productCard .costProduct {
   color: #114165;
   font-size: 16px;
-  font-weight: 900;
+  font-family: Arial;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 5px;
   width: 100%;
   text-align: center;
 }
@@ -461,8 +507,8 @@ div.filterBlock .findDisc p {
   cursor: pointer;
 }
 
-.containerProd .prevProduct .productCard:hover .costProduct {
-  text-align: right;
+.containerProd .prevProduct .productCard:hover .cardImg {
+  box-shadow: 0 0 10px #000;
 }
 
 .containerProd .brands {
@@ -470,12 +516,12 @@ div.filterBlock .findDisc p {
 }
 
 .containerProd .brands form {
-  margin: 0 15px;
+  margin: 0 27px;
 }
 
 .containerProd .brands label {
   display: block;
-  margin: 10px 0;
+  margin: 7px 0;
   color: #465961;
   font-size: 12.73px;
   vertical-align: top;
@@ -494,8 +540,9 @@ div.filterBlock .findDisc p {
   outline: none;
   border: none;
   color: #e5e9ea;
-  margin-top: 15px;
-  margin-left: 10px;
+  margin-top: 9px;
+  margin-left: 9px;
+  font-size: 11.75px;
 }
 
 .containerProd .brands input[type="button"]:active {
@@ -505,20 +552,18 @@ div.filterBlock .findDisc p {
 .brandsLogo {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 89px;
+  align-items: baseline;
+  height: 30px;
+  margin: 30px 0 30px;
 }
 
 .brandsLogo img {
-  margin: 0 10px;
-  width: 82px;
-  height: 20px;
+  margin: 0 6px;
 }
 
 footer {
   min-height: 100px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   background: #213a4d;
 }
@@ -526,10 +571,12 @@ footer {
 footer p {
   color: #7f4740;
   font-size: 10px;
+  margin-top: 16px;
 }
 
 .fooMenu {
   list-style: none;
+  margin-top: 10px;
 }
 
 .fooMenu li {
@@ -539,7 +586,7 @@ footer p {
 .fooMenu li a {
   margin: 0 10px;
   color: #bec6c9;
-  font-size: 12.75px;
+  font-size: 12px;
   text-decoration: none;
 }
 
