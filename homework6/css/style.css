@@ -1,11 +1,16 @@
 @charset "UTF-8";
+@font-face {
+  font-family: lucidaSans;
+  src: url("../font/Lucida Sans Unicode Regular.ttf");
+}
+
 body {
   background: #fff;
+  font-family: 'lucidaSans', sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  font-family: sans-serif;
 }
 
 header, main, footer {
@@ -186,6 +191,7 @@ div.filterBlock span {
 }
 
 div.filterBlock h3 {
+  font-family: "Arial";
   color: #154467;
   font-size: 12px;
   font-weight: 900;
@@ -193,12 +199,14 @@ div.filterBlock h3 {
 }
 
 div.filterBlock a {
+  font-family: "Arial";
   display: block;
   text-align: right;
 }
 
 div.filterBlock h4 {
   color: #154467;
+  font-family: "Arial";
   font-size: 12px;
   font-weight: 900;
   margin: 3px;
@@ -298,6 +306,8 @@ div.filterBlock .findDisc p {
   height: 25px;
   border: 1px solid #8c969a;
   border-radius: 12.5px;
+  position: relative;
+  padding-left: 25px;
   box-shadow: 0 1px 2px #8c969a;
   line-height: 25px;
   font-size: 14px;
@@ -307,8 +317,8 @@ div.filterBlock .findDisc p {
 
 .cirkle::before {
   content: "";
-  position: relative;
-  top: 3px;
+  position: absolute;
+  top: 2px;
   left: 2px;
   margin-right: 6px;
   display: inline-block;
@@ -322,6 +332,7 @@ div.filterBlock .findDisc p {
   position: relative;
   margin: 5px 5px 10px;
   font-size: 12.73px;
+  padding: 0;
 }
 
 .icon-phone-circled img {
@@ -337,7 +348,7 @@ div.filterBlock .findDisc p {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 3px;
+  top: 2px;
   left: 2px;
   display: inline-block;
   background: linear-gradient(to top, #0c3357, #1f6786);
