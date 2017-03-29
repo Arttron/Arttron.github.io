@@ -94,6 +94,7 @@ header {
 
 .entryForm input {
   margin: 0;
+  padding-left: 3px;
   height: 15px;
   width: 110px;
   outline: none;
