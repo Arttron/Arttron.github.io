@@ -9,18 +9,18 @@
 </head>
 <body>
 	<div class="wrapper">
-	<header>
-			<div class="logo">
+	<header class="header">
+			<div class="logo header__logo">
 				<h1>PINGBULL<span class="logo__er">ER</span></h1>
 			</div>
-			<nav class="menu">
-				<ul class="menu__top">
-					<li class="menu__select menu--underline"><a href="#">HOME</a>
-					<li><a href="#">ABOUT</a>
-					<li><a href="#">BLOG</a>
-					<li><a href="#">PRODUCTS</a>
-					<li><a href="#">LOREN IPSUM</a>
-					<li><a href="#">DOLOR SIT AMET</a>
+			<nav>
+				<ul class="topMenu header__topMenu">
+					<li class="topMenu__item topMenu--select"><a class="topMenu__link" href="#">HOME</a>
+					<li class="topMenu__item"><a class="topMenu__link" href="#">ABOUT</a>
+					<li class="topMenu__item"><a class="topMenu__link" href="#">BLOG</a>
+					<li class="topMenu__item"><a class="topMenu__link" href="#">PRODUCTS</a>
+					<li class="topMenu__item"><a class="topMenu__link" href="#">LOREN IPSUM</a>
+					<li class="topMenu__item"><a class="topMenu__link" href="#">DOLOR SIT AMET</a>
 				</ul>
 			</nav>
 		</header>
@@ -29,63 +29,75 @@
 				<div class="slider__text">
 					<h2>Lorem Ipsum Dolor</h2>
 					<h3>IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</h3>
-					<p>Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis,</p>
-					<img src="img/Iphone.png" alt="" class="slider--img">
+					<p class="slider__text-p">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis,</p>
 				</div>
-				
+				<img class="slider__img" src="img/Iphone.png" alt="">
+				</div>
+			
+			<div class="slider__buttonBar">
+					<span class="slider__button"></span>
+					<span  class="slider__button slide--current"></span>
+					<span class="slider__button"></span>
+					<span class="slider__button"></span>
 			</div>
-			<div class="slider__button">
-					<span></span>
-					<span class="slide--current"></span>
-					<span></span>
-					<span></span>
-				</div>
 		</section>
 		<main>
 			<section class="blurbs">
-				<div class="blurbs__section">
-					<span class="blurbs__pic"></span>
-					<h3>ABOUT OUR COMPANY</h3>
-					<p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-					<a href="#">READ MORE</a>
-				</div>
-				<div class="blurbs__section">
-					<span class="blurbs__pic"></span>
-					<h3>ABOUT OUR COMPANY</h3>
-					<p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-					<a href="#">READ MORE</a>
-				</div>
-				<div class="blurbs__section">
-					<span class="blurbs__pic"></span>
-					<h3>ABOUT OUR COMPANY</h3>
-					<p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-					<a href="#">READ MORE</a>
+				<div class="blurbs__content">
+					<div class="blurbs__section">
+						<span class="blurbs__pic1"></span>
+						<div class="blurbs-cover">
+							<h3>ABOUT OUR COMPANY</h3>
+							<p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+							<a href="#">READ MORE</a>
+						</div>
+					</div>
+					<div class="blurbs__section">
+						<span class="blurbs__pic2"></span>
+						<div class="blurbs-cover">
+							<h3>ABOUT OUR COMPANY</h3>
+							<p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+							<a href="#">READ MORE</a>
+						</div>
+					</div>
+					<div class="blurbs__section">
+						<span class="blurbs__pic3"></span>
+						<div class="blurbs-cover">
+							<h3>ABOUT OUR COMPANY</h3>
+							<p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+							<a href="#">READ MORE</a>
+						</div>
+					</div>
 				</div>
 			</section>
 			<secton class="testimonials">
-				<img src="img/Human_1.png" alt="">
-				<h3>PingbulLer<span>starts here</span></h3>
-				<p></p>
-				<div class="slider__button">
-					<span></span>
-					<span class="slide--current"></span>
-					<span></span>
-					<span></span>
-				</div>
+				<div class="testimonials__cover">
+				<img class="testimonials__img" src="img/Human_1.png" alt="">
+					<h3>PingbulLer<span>starts here</span></h3>
+					<p>“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
+ 					Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+					
+					</div>
+				<div class="slider__buttonBar">
+					<span class="slider__button"></span>
+					<span  class="slider__button slide--current"></span>
+					<span class="slider__button"></span>
+					<span class="slider__button"></span>
+			</div>
 			</secton>
 			<section class="blog">
 				<div>
-					<a href="#" class="blog__user"><img src="" alt=""></a>
+					<a href="#" class="blog__user"><img src="img/RecentP_1.png" alt=""></a>
 					<h4>Nunc turpis neque feugiat eget </h4>
 					<p>osted by Admin on March 13 2012 in Recent News</p>
 				</div>
 				<div>
-					<a href="#" class="blog__user"><img src="" alt=""></a>
+					<a href="#" class="blog__user"><img src="img/RecentP_2.png" alt=""></a>
 					<h4>Nunc turpis neque feugiat eget </h4>
 					<p>osted by Admin on March 13 2012 in Recent News</p>
 				</div>
 				<div>
-					<a href="#" class="blog__user"><img src="" alt=""></a>
+					<a href="#" class="blog__user"><img src="img/RecentP_3.png" alt=""></a>
 					<h4>Nunc turpis neque feugiat eget </h4>
 					<p>osted by Admin on March 13 2012 in Recent News</p>
 				</div>
@@ -99,7 +111,7 @@
 				<img src="img/logos5.png" alt="">
 				<img src="img/logos6.png" alt="">
 			</div>
-			<footer>
+			<footer class="footer">
 				<div class="fooBox1">
 					<h2>PIGBULL<span class="fooBox__er">ER</span></h2>
 					<h4>Copyright 2013, Pingbull AS</h4>
