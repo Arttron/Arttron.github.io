@@ -1,5 +1,6 @@
 .gitignore.swp
 materials/
+trash/
 .idea/
 gulpfile.js
 node_modules/
