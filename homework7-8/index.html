@@ -11,41 +11,37 @@
 	<div class="wrapper">
 	<header class="header">
 			<div class="logo header__logo">
-				<h1>PINGBULL<span class="logo__er">ER</span></h1>
+                <img src="img/logo.png" alt="LOGO"/>
+				<!--<h1>PINGBULL<span class="logo__er">ER</span></h1>-->
 			</div>
 			<nav class="navMenu">
-				<ul class="topMenu header__topMenu">
-					<li class="topMenu__item topMenu--select"><a class="topMenu__link" href="#">HOME</a>
-					<ul class="topMenu-dropDown">
-						<li class="topMenu-dropDown__item"><a class="topMenu-dropDown__link" href="#">HOME</a></li>
-						<li class="topMenu-dropDown__item"><a class="topMenu-dropDown__link" href="#">ABOUT</a></li>
-						<li class="topMenu-dropDown__item"><a class="topMenu-dropDown__link" href="#">BLOG</a></li>
-						<li class="topMenu-dropDown__item"><a class="topMenu-dropDown__link" href="#">PRODUCTS</a></li>
-						<li class="topMenu-dropDown__item"><a class="topMenu-dropDown__link" href="#">LOREN IPSUM</a></li>
-						<li class="topMenu-dropDown__item"><a class="topMenu-dropDown__link" href="#">DOLOR SIT AMET</a></li>
-					</ul>
-					<li class="topMenu__item"><a class="topMenu__link" href="#">ABOUT</a>
-					<li class="topMenu__item"><a class="topMenu__link" href="#">BLOG</a>
-					<li class="topMenu__item"><a class="topMenu__link" href="#">PRODUCTS</a>
-					<li class="topMenu__item"><a class="topMenu__link" href="#">LOREN IPSUM</a>
-					<li class="topMenu__item"><a class="topMenu__link" href="#">DOLOR SIT AMET</a>
+				<ul class="Menu header__topMenu">
+					<li class="Menu__item--select"><a class="Menu__link Menu__ferst-link" href="#">HOME</a>
+					<li class="Menu__item"><a class="Menu__link" href="#">ABOUT</a>
+					<li class="Menu__item"><a class="Menu__link" href="#">BLOG</a>
+					<li class="Menu__item"><a class="Menu__link" href="#">PRODUCTS</a>
+					<li class="Menu__item"><a class="Menu__link" href="#">DOLOR SIT AMET</a>
+					<li class="Menu__item"><a class="Menu__link" href="#">LOREN IPSUM</a>
 				</ul>
 				
 			</nav>
 		</header>
 		<section class="slider">
-			<div class="slider__item">
-				<div class="slider__text">
-					<h2>Lorem Ipsum Dolor</h2>
-					<h3>IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</h3>
-					<p class="slider__text-p">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis,</p>
-				</div>
-				<img class="slider__img" src="img/Iphone.png" alt="">
-				</div>
-			
+            <div class="slider__content">
+                <div class="slider__left-btn"><a class="LB" href=""></a></div>
+                <div class="slider__item">
+                    <div class="slider__text">
+                        <h2 class="slider__head1">Lorem Ipsum Dolor</h2>
+                        <h3 class="slider__head2">IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</h3>
+                        <p class="slider__text-p">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis,</p>
+                    </div>
+                    <img class="slider__img" src="img/Iphone.png" alt="">
+                    </div>
+                <div class="slider__right-btn"><a class="LR" href=""></a></div>
+            </div>
 			<div class="buttonBar slider__buttonBar">
 					<a href="#" class="buttonBar__button slider__button"></a>
-					<a href="#" class="buttonBar__button buttonBar__button_curent slider__button_curent slider__button"></a>
+					<a href="#" class="buttonBar__button buttonBar__button-curent slider__button_curent slider__button"></a>
 					<a href="#" class="buttonBar__button slider__button"></a>
 					<a href="#" class="buttonBar__button slider__button"></a>
 			</div>
@@ -53,44 +49,56 @@
 		<main class="main-content">
 			<section class="blurbs">
 				<div class="blurbs__content">
-					<div class="blurbs__section">
+					<article class="blurbs__section">
 						<span class="blurbs__pic1 blurbs__pic"></span>
-						<div class="blurbs-cover">
+                        <svg class="blurbs__icon">
+                            <use xlink:href="img/svg/symbol-defs.svg#icon-key"></use>
+                        </svg>
+                        <div class="blurbs-cover">
 							<h3 class="blurbs__header">ABOUT OUR COMPANY</h3>
-							<p class="blurbs__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+							<p class="blurbs__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
+                                <span class="text-480use"> ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</span></p>
 							<div class="blurbs__div-link">
 								<a class="blurbs__link" href="#">READ MORE</a>
 							</div>
 						</div>
-					</div>
-					<div class="blurbs__section">
+					</article>
+					<article class="blurbs__section">
 						<span class="blurbs__pic2 blurbs__pic"></span>
-						<div class="blurbs-cover">
+                        <svg class="blurbs__icon">
+                            <use xlink:href="img/svg/symbol-defs.svg#icon-note"></use>
+                        </svg>
+                        <div class="blurbs-cover">
 							<h3 class="blurbs__header">ABOUT OUR COMPANY</h3>
-							<p class="blurbs__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-							<div class="blurbs__div-link">
+							<p class="blurbs__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
+                                <span class="text-480use"> ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</span></p>
+                            <div class="blurbs__div-link">
 								<a class="blurbs__link" href="#">READ MORE</a>
 							</div>
 						</div>
-					</div>
-					<div class="blurbs__section">
+					</article>
+					<article class="blurbs__section">
 						<span class="blurbs__pic3 blurbs__pic"></span>
-						<div class="blurbs-cover">
+                        <svg class="blurbs__icon">
+                            <use xlink:href="img/svg/symbol-defs.svg#icon-cloud"></use>
+                        </svg>
+                        <div class="blurbs-cover">
 							<h3 class="blurbs__header">ABOUT OUR COMPANY</h3>
-							<p class="blurbs__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-							<div class="blurbs__div-link">
+							<p class="blurbs__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
+                                <span class="text-480use"> ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</span></p>
+                            <div class="blurbs__div-link">
 								<a class="blurbs__link" href="#">READ MORE</a>
 							</div>
 						</div>
-					</div>
+					</article>
 				</div>
 			</section>
 			<secton class="testimonials">
 				<div class="testimonials__cover">
 				<img class="testimonials__img" src="img/Human_1.png" alt="">
 					<h3 class="testimonials__header"><span class="testimonials__header--logo">PingbulLer </span>starts here</h3>
-					<p class="testimonials__text">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
- 					Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+					<p class="testimonials__text">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
+                        <span class="text-480use">lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.” Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</span></p>
 					
 					</div>
 				<div class="buttonBar testimonials__buttonBar">
@@ -101,31 +109,31 @@
 			</div>
 			</secton>
 			<section class="blog">
-			<div class="blog__content">
+			<div class="blog__contenSt">
 				<h2 class="blog__header">RECENT UPDATES</h2>
 					<div class="blog__item">
 						<a class="blog__link" href="#"><img class="blog__userPic" src="img/RecentP_1.png" alt=""></a>
 						<div class="blog__text-container">
-							<h4 class="blog__item-header">Nunc turpis neque<span class="blog__content--hiden480"> feugiat eget</span></h4>
-							<p class="blog__text">Posted by Admin on March 13 <span class="blog__content--hiden480">2012 </span><span class="blog__content--hiden768">in Recent News</span></p>
+							<h4 class="blog__item-header">Nunc turpis neque<span class="text-480use"> feugiat eget</span></h4>
+							<p class="blog__text">Posted by Admin on March 13 <span class="text-480use">2012 <span class="blog__content--hiden768">in Recent News</span></span></p>
 						</div>
 					</div>
 					<div class="blog__item">
 						<a class="blog__link" href="#"><img class="blog__userPic" src="img/RecentP_2.png" alt=""></a>
 						<div class="blog__text-container">
-							<h4 class="blog__item-header">Nunc turpis neque<span class="blog__content--hiden480"> feugiat eget</span></h4>
-							<p class="blog__text">Posted by Admin on March 13 <span class="blog__content--hiden480">2012 </span><span class="blog__content--hiden768">in Recent News</span></p>
+							<h4 class="blog__item-header">Nunc turpis neque<span class="text-480use"> feugiat eget</span></h4>
+							<p class="blog__text">Posted by Admin on March 13 <span class="text-480use">2012 <span class="blog__content--hiden768">in Recent News</span></span></p>
 						</div>
 					</div>
 					<div class="blog__item">
 						<a class="blog__user-link" href="#"><img class="blog__userPic" src="img/RecentP_3.png" alt=""></a>
 						<div class="blog__text-container">
-							<h4 class="blog__item-header">Nunc turpis neque<span class="blog__content--hiden480"> feugiat eget</span></h4>
-							<p class="blog__text">Posted by Admin on March 13 <span class="blog__content--hiden480">2012 </span><span class="blog__content--hiden768">in Recent News</span></p>
+							<h4 class="blog__item-header">Nunc turpis neque<span class="text-480use"> feugiat eget</span></h4>
+							<p class="blog__text">Posted by Admin on March 13 <span class="text-480use">2012 <span class="blog__content--hiden768">in Recent News</span></span></p>
 						</div>
 					</div>
 			</div>
-				<div class="blog__linkMod">
+				<div class="blog__link-mod">
 					<a class="blog__link blog__link-960" href="#">READ MORE HERE</a>
 					<a class="blog__link blog__link-768" href="#">MORE BLOG HERE</a>
 				</div>
@@ -142,7 +150,7 @@
 				</div>
 			</div>
 			<footer class="footer">
-				<div class="footer__fooBox">
+				<div class="footer__fooBox block-480use">
 					<div class="fooBox1">
 						<h2>PIGBULL<span class="fooBox__er">ER</span></h2>
 						<h4>Copyright 2013, Pingbull AS</h4>
@@ -158,7 +166,7 @@
 					</div>
 				</div>
 				<div class="footer__navCopy">
-					<nav class="foo__menu-wrapper">
+					<nav class="foo__menu-wrapper block-480use">
 						<ul class="foo__menu">
 							<li class="foo__menu-item"><a class="foo__menu-link" href="#">HOME</a>
 							<li class="foo__menu-item"><a class="foo__menu-link" href="#">ABOUT</a>
