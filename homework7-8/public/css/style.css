@@ -254,6 +254,7 @@ body {
 .blurbs {
   background: linear-gradient(0deg, #36293D, #745183);
   line-height: 1.5rem;
+  width: 100vw;
 }
 
 .blurbs__content {
@@ -267,18 +268,21 @@ body {
 .blurbs__section {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
 }
 
-.blurbs-cover {
+.blurbs__cover {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 2;
   margin-left: 1rem;
   align-items: flex-start;
   color: #fff;
+  flex-wrap: wrap;
 }
 
 .blurbs__header {
@@ -311,9 +315,9 @@ body {
 
 .blurbs__icon {
   color: #fff;
-  width: 3rem;
-  height: 2rem;
-  display: inline-block;
+  height: 25px;
+  width: 25px;
+  display: block;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -407,8 +411,8 @@ body {
 }
 
 .logos__item {
-  height: 120px;
-  margin: 10px;
+  width: 33vw;
+  margin: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -422,7 +426,6 @@ body {
   height: 200px;
   display: flex;
   flex-direction: column;
-  align-items: top;
 }
 
 .footer__copyR {
@@ -445,5 +448,48 @@ body {
   }
   .Menu__item {
     display: list-item;
+  }
+}
+
+/*********************** buttonBar variables ****************/
+/**************** COLORS *******************/
+@media (min-width: 321px) {
+  .text-480use {
+    display: inline;
+  }
+  .block-480use {
+    display: block;
+  }
+  .blurbs__cover {
+    width: 100vw;
+    flex-shrink: .2;
+  }
+  .logos__item {
+    width: 25vw;
+  }
+  .foo__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .foo__menu-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: LeagueGothicR;
+    font-size: 1.25;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 768px) {
+  .blurbs__content {
+    flex-direction: row;
+  }
+  .blurbs__cover {
+    width: 33%;
+  }
+  .blurbs__section {
+    width: 33%;
   }
 }

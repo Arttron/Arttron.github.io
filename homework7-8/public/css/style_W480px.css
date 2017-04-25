@@ -1,0 +1,30 @@
+/*********************** buttonBar variables ****************/
+/**************** COLORS *******************/
+@media (min-width: 321px) {
+  .text-480use {
+    display: inline;
+  }
+  .block-480use {
+    display: block;
+  }
+  .blurbs__cover {
+    width: 100vw;
+    flex-shrink: .2;
+  }
+  .logos__item {
+    width: 25vw;
+  }
+  .foo__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .foo__menu-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: LeagueGothicR;
+    font-size: 1.25;
+    color: #ffffff;
+  }
+}

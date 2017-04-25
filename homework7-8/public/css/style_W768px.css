@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+  .blurbs__content {
+    flex-direction: row;
+  }
+  .blurbs__cover {
+    width: 33%;
+  }
+  .blurbs__section {
+    width: 33%;
+  }
+}
