@@ -18,6 +18,10 @@ body {
   font-size: 16px;
 }
 
+.text__768use {
+  display: none;
+}
+
 .text-480use {
   display: none;
 }
@@ -352,10 +356,19 @@ body {
   display: block;
 }
 
+.testimonials__text {
+  max-height: 7em;
+  overflow: hidden;
+}
+
 /************************ BLOG **************************/
 .blog {
   margin: 0 20px;
   color: #454545;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .blog__header {
@@ -370,8 +383,22 @@ body {
   align-items: center;
 }
 
+.blog__link-mod {
+  display: flex;
+  align-self: flex-end;
+}
+
+.blog__text-container {
+  margin-left: 16px;
+}
+
 .blog__item-header {
   font-weight: 900;
+}
+
+.blog__text {
+  max-height: 1em;
+  overflow: hidden;
 }
 
 .blog .blog__link-960 {
@@ -464,6 +491,9 @@ body {
     width: 100vw;
     flex-shrink: .2;
   }
+  .blog__link-mod {
+    padding-right: 60px;
+  }
   .logos__item {
     width: 25vw;
   }
@@ -479,6 +509,13 @@ body {
     font-family: LeagueGothicR;
     font-size: 1.25;
     color: #ffffff;
+  }
+  .fooBox__text {
+    height: 4em;
+    overflow: hidden;
+  }
+  .fooBox__grace-copy {
+    display: none;
   }
 }
 
