@@ -13,9 +13,20 @@ function pow( num, ext){
     }
     return res;
 }
-
+function valueIsNaN(v) { return v !== v; }
 var uNum, uExt;
-uNum = +prompt('Введите цифру для возведения', '');
-uExt = +prompt('Введите степень', '');
+var fNum = false;
+
+while(!fNum){
+    uNum = +prompt('Введите цифру для возведения', 'Ваше число');
+    console.log(uNum);
+    valueIsNaN(uNum)?alert('Введите число!'):fNum=true;
+}
+fNum = false;
+
+while(!fNum){
+    uExt = +prompt('Введите степень', 'Ваше число');
+    valueIsNaN(uExt)?alert('Введите число!'):fNum=true;
+}
 console.log("Результат: "+pow(uNum, uExt));
 
