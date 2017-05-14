@@ -19,7 +19,6 @@ var fNum = false;
 
 while(!fNum){
     uNum = +prompt('Введите цифру для возведения', 'Ваше число');
-    console.log(uNum);
     valueIsNaN(uNum)?alert('Введите число!'):fNum=true;
 }
 fNum = false;

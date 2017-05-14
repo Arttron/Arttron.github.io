@@ -1,4 +1,10 @@
 @media (min-width: 768px) {
+  .text-480use {
+    display: inline;
+  }
+  .block-480use {
+    display: block;
+  }
   .blurbs__content {
     flex-direction: row;
   }
