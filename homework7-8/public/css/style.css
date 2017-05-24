@@ -75,6 +75,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
   font-family: LeagueGothicR;
   font-size: 1.5rem;
   position: absolute;
@@ -226,6 +227,13 @@ body {
   display: none;
 }
 
+.main-content__cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .blurbs {
   background: linear-gradient(0deg, #36293D, #745183);
   line-height: 1.5rem;
@@ -291,7 +299,7 @@ body {
 .blurbs__icon {
   color: #fff;
   height: 25px;
-  width: 25px;
+  width: 2rem;
   display: block;
   stroke-width: 0;
   stroke: currentColor;
@@ -433,25 +441,9 @@ body {
   color: #fff;
 }
 
-@media (min-width: 768px) {
-  .text-480use {
-    display: inline;
-  }
-  .Menu {
-    flex-direction: row;
-    position: relative;
-  }
-  .Menu__ferst-item {
-    border-bottom: 3px solid transparent;
-  }
-  .Menu__item {
-    display: list-item;
-  }
-}
-
 /*********************** buttonBar variables ****************/
 /**************** COLORS *******************/
-@media (min-width: 321px) and (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 480px) {
   .text-480use {
     display: inline;
   }
@@ -459,20 +451,19 @@ body {
     display: block;
   }
   .navMenu {
-    margin-top: 90px;
-    position: relative;
-    height: 122px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 90px;
+    position: relative;
+    height: 122px;
   }
   .Menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: LeagueGothicR;
     font-size: 1.5rem;
     position: absolute;
   }
@@ -554,6 +545,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
   .text-480use {
     display: inline;
   }
@@ -568,5 +562,22 @@ body {
   }
   .blurbs__section {
     width: 33%;
+  }
+  .main-content__cover {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .text-480use {
+    display: inline;
+  }
+  .Menu {
+    flex-direction: row;
+    position: relative;
+  }
+  .Menu__ferst-item {
+    border-bottom: 3px solid transparent;
+  }
+  .Menu__item {
+    display: list-item;
   }
 }

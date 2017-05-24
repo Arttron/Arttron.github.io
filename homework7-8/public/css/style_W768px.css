@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
   .text-480use {
     display: inline;
   }
@@ -13,5 +16,22 @@
   }
   .blurbs__section {
     width: 33%;
+  }
+  .main-content__cover {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .text-480use {
+    display: inline;
+  }
+  .Menu {
+    flex-direction: row;
+    position: relative;
+  }
+  .Menu__ferst-item {
+    border-bottom: 3px solid transparent;
+  }
+  .Menu__item {
+    display: list-item;
   }
 }

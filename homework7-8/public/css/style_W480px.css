@@ -1,6 +1,6 @@
 /*********************** buttonBar variables ****************/
 /**************** COLORS *******************/
-@media (min-width: 321px) and (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 480px) {
   .text-480use {
     display: inline;
   }
@@ -8,20 +8,19 @@
     display: block;
   }
   .navMenu {
-    margin-top: 90px;
-    position: relative;
-    height: 122px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 90px;
+    position: relative;
+    height: 122px;
   }
   .Menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: LeagueGothicR;
     font-size: 1.5rem;
     position: absolute;
   }

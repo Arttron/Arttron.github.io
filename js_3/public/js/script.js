@@ -26,7 +26,7 @@ var test = {
     },
     outQuestions: function () {
         var container = document.createElement('form');
-        var qBlock = [], qBlock_item = [[[]]];
+        var qBlock = [], qBlock_item = [[]];
         var body = document.querySelector('.body');
         container.className = 'container';
         container.setAttribute('action', '../post.php');
@@ -41,22 +41,22 @@ var test = {
             qBlock[i].style.marginBottom = '15px';
             qBlock[i].innerHTML = '<h2>'+Number(Number(i)+1)+'.'+' '+test.data.questions[i].title+'</h2>';
             container.appendChild(qBlock[i]);
-            qBlock_item[i]=[i];
-            qBlock_item[i][i]=[i];
+            //qBlock_item[i]=[i];
+//            qBlock_item[i][i]=[i];
             for (q in test.data.questions[i].answers){
-                qBlock_item[i][q] = document.createElement('label');
-                qBlock_item[i][q][q] = document.createElement('input');
-                qBlock_item[i][q].className = 'label_item';
-                qBlock_item[i][q][q].setAttribute('type', 'radio');
-                qBlock_item[i][q][q].setAttribute('value', 'radio'+i+q);
-                qBlock_item[i][q][q].className = 'radio'
-                qBlock_item[i][q][q].setAttribute('name', 'r'+i);
-                qBlock_item[i][q][q].setAttribute('id', 'rq'+i+q);
-                qBlock_item[i][q][q].style.margin = '0 10px'
-                qBlock_item[i][q].setAttribute('for', 'rq'+i+q);
-                qBlock_item[i][q].innerHTML = test.data.questions[i].answers[q];
-                qBlock[i].appendChild(qBlock_item[i][q][q]);
-                qBlock[i].appendChild(qBlock_item[i][q]);
+                qBlock_item[q] = document.createElement('label');
+                qBlock_item[q][q] = document.createElement('input');
+                qBlock_item[q].className = 'label_item';
+                qBlock_item[q][q].setAttribute('type', 'radio');
+                qBlock_item[q][q].setAttribute('value', 'radio'+i+q);
+                qBlock_item[q][q].className = 'radio'
+                qBlock_item[q][q].setAttribute('name', 'r'+i);
+                qBlock_item[q][q].setAttribute('id', 'rq'+i+q);
+                qBlock_item[q][q].style.margin = '0 10px'
+                qBlock_item[q].setAttribute('for', 'rq'+i+q);
+                qBlock_item[q].innerHTML = test.data.questions[i].answers[q];
+                qBlock[i].appendChild(qBlock_item[q][q]);
+                qBlock[i].appendChild(qBlock_item[q]);
             }
         }
         var btn = document.createElement('input');
