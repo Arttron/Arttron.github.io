@@ -1,109 +1,40 @@
 (function(){
-//    var startTime = Date();
-//
-//    var displaySec = document.getElementById('seconds');
-//    var displayMiliSec = document.getElementById('milisec');
-//    var displayMinuts = document.getElementById('minuts');
-//    var dataTime = new Date();
-//    function showeTimeOnDisplay(time_qt){
-//        var ms_str, sec_str, min_str;
-//        dataTime.setTime(time_qt);
-//        if(dataTime.getMilliseconds()<100) {
-//            ms_str = '0' + dataTime.getMilliseconds();
-//            if (dataTime.getMilliseconds() < 10) {
-//                ms_str = '00' + dataTime.getMilliseconds();
-//            }
-//        }else{
-//            ms_str = '' + dataTime.getMilliseconds();
-//        }
-//
-//        if(dataTime.getSeconds()<10){
-//            sec_str= '0'+dataTime.getSeconds();
-//        }else{
-//            sec_str= ''+dataTime.getSeconds();
-//        }
-//        if(dataTime.getMinutes()<10){
-//            min_str= '0'+dataTime.getMinutes();
-//        }else{
-//            min_str= ''+dataTime.getMinutes();
-//        }
-//        displayMiliSec.innerHTML = ms_str ;
-//
-//        displaySec.innerHTML = sec_str;
-//
-//        displayMinuts.innerHTML = min_str;
-//    }
-//
-//    function countTime(){
-//        var qt = Date.now()-startTime;
-//        console.log(qt);
-//        showeTimeOnDisplay(qt);
-//    }
-//
-//    var btnStartStop = document.querySelector('#btnStartStop');
-//    var btnReset = document.querySelector('#btnReset');
-//    var timer_sec, timePause;
-//    startTime = 0;
-//    timePause = false;
-//    btnStartStop.addEventListener('click', function(){
-//        if(!startTime){
-//            startTime = Date.now();
-//        }
-//       if(!timer_sec) {
-//           btnStartStop.setAttribute('value', "Pause");
-//           timer_sec = setInterval(countTime, 333);
-//            timePause = false;
-//       }else{
-//           clearInterval(timer_sec);
-//           timer_sec=0;
-//           btnStartStop.setAttribute('value', "Start");
-//           timePause = true;
-//       }
-//    });
-//
-//
-//
-//    btnReset.addEventListener('click', function(){
-//        if(timePause){
-//            startTime = 0;
-//            showeTimeOnDisplay(0);
-//            timePause = false;
-//            btnStartStop.setAttribute('value', "Start");
-//        }
-//    });
-    var stopWatch = function(){
-
-        var startTime = Date();
-        var displaySec = document.getElementById('seconds');
-        var displayMiliSec = document.getElementById('milisec');
-        var displayMinuts = document.getElementById('minuts');
-        var dataTime = new Date();
-
-        function init (){
+    function StopWatch(){
+        this.startTime = 0;
+        this.dataTime = new Date();
+        this.idWatch = 0;
+        this.pauseWatch = true;
+        this.qtPause = 0;
+        this.qt = 0;
+        var my = this;
+        this.init = function (){
             var blockTimer = document.querySelector('.blockTimer');
-        }
+        };
+        this.showeTimeOnDisplay = function (time_qt){
+            var displaySec = document.getElementById('seconds');
+            var displayMiliSec = document.getElementById('milisec');
+            var displayMinuts = document.getElementById('minuts');
 
-        function showeTimeOnDisplay(time_qt){
             var ms_str, sec_str, min_str;
-            dataTime.setTime(time_qt);
-            if(dataTime.getMilliseconds()<100) {
-                ms_str = '0' + dataTime.getMilliseconds();
-                if (dataTime.getMilliseconds() < 10) {
-                    ms_str = '00' + dataTime.getMilliseconds();
+            this.dataTime.setTime(time_qt);
+
+            if(this.dataTime.getMilliseconds()<100) {
+                ms_str = '0' + this.dataTime.getMilliseconds();
+                if (this.dataTime.getMilliseconds() < 10) {
+                    ms_str = '00' + this.dataTime.getMilliseconds();
                 }
             }else{
-                ms_str = '' + dataTime.getMilliseconds();
+                ms_str = '' + this.dataTime.getMilliseconds();
             }
-
-            if(dataTime.getSeconds()<10){
-                sec_str= '0'+dataTime.getSeconds();
+            if(this.dataTime.getSeconds()<10){
+                sec_str= '0'+this.dataTime.getSeconds();
             }else{
-                sec_str= ''+dataTime.getSeconds();
+                sec_str= ''+this.dataTime.getSeconds();
             }
-            if(dataTime.getMinutes()<10){
-                min_str= '0'+dataTime.getMinutes();
+            if(this.dataTime.getMinutes()<10){
+                min_str= '0'+this.dataTime.getMinutes();
             }else{
-                min_str= ''+dataTime.getMinutes();
+                min_str= ''+this.dataTime.getMinutes();
             }
 
             displayMiliSec.innerHTML = ms_str ;
@@ -111,72 +42,73 @@
             displaySec.innerHTML = sec_str;
 
             displayMinuts.innerHTML = min_str;
-        }
+        };
 
-        function countTime(){
-            var qt = Date.now()-startTime;
-            console.log(qt);
-            showeTimeOnDisplay(qt);
-        }
-
-        function run(){
-            var timer_sec, timePause;
-            startTime = 0;
-            timePause = false;
-            if(!startTime){
-                startTime = Date.now();
-            }
-            if(!timer_sec) {
-                timer_sec = setInterval(countTime, 333);
-                timePause = false;
-                return "Pause";
+        this.countTime = function(){
+            my.qt = Date.now()-my.startTime;
+//            console.log('fgsfg'+Number(my.qt+my.qtPause));
+            my.showeTimeOnDisplay(my.qt+my.qtPause);
+        };
+        this.run = function(){
+//            console.log(my.pauseWatch);
+            if(my.pauseWatch){
+               // if(!my.startTime){
+                    my.startTime = Date.now();
+                //}
+                my.idWatch = setInterval(my.countTime, 1);
+                my.pauseWatch = false;
+                return "Running";
             }else{
-                clearInterval(timer_sec);
-                timer_sec=0;
-                timePause = true;
+
+                return "Run";
+            }
+        };
+        this.pause = function(){
+           if(!this.pauseWatch){
+               clearInterval(my.idWatch);
+               my.qtPause += my.qt;
+               my.idWatch=0;
+               my.pauseWatch = true;
+               my.timePause = true;
+               return "Run";
+           }else{
+               return "Run";
+           }
+        };
+        this.clear = function (){
+            if(my.timePause){
+                my.startTime = 0;
+                my.qtPause = 0;
+                my.showeTimeOnDisplay(0);
+                my.timePause = false;
+                my.pauseWatch = true;
                 return "Start";
             }
-        }
+        };
+    }
 
-        function clear(){
-            if(timePause){
-                startTime = 0;
-                showeTimeOnDisplay(0);
-                timePause = false;
-                return "Start";
-            }
-        }
-    };
-
+    var stopWatch2 = new StopWatch();
     var btnStartStop = document.querySelector('#btnStartStop');
     var btnReset = document.querySelector('#btnReset');
-    var timer_sec, timePause;
-    startTime = 0;
-    timePause = false;
+    var recWatch = 'Run';
+
     btnStartStop.addEventListener('click', function(){
-        if(!startTime){
-            startTime = Date.now();
+        if(recWatch === 'Run'){
+            btnStartStop.setAttribute('value','Pause' );
+            recWatch = stopWatch2.run();
+//            console.log(recWatch);
+        }else{
+            recWatch = stopWatch2.pause();
+//            console.log(recWatch);
+            btnStartStop.setAttribute('value', 'Run');
         }
-       if(!timer_sec) {
-           btnStartStop.setAttribute('value', "Pause");
-           timer_sec = setInterval(countTime, 333);
-            timePause = false;
-       }else{
-           clearInterval(timer_sec);
-           timer_sec=0;
-           btnStartStop.setAttribute('value', "Start");
-           timePause = true;
-       }
+
     });
 
-
-
     btnReset.addEventListener('click', function(){
-        if(timePause){
-            startTime = 0;
-            showeTimeOnDisplay(0);
-            timePause = false;
-            btnStartStop.setAttribute('value', "Start");
+        if(recWatch!=='Running'){
+            stopWatch2.clear();
+            recWatch = 'Run';
         }
     });
 })();
