@@ -46,15 +46,11 @@
 
         this.countTime = function(){
             my.qt = Date.now()-my.startTime;
-//            console.log('fgsfg'+Number(my.qt+my.qtPause));
             my.showeTimeOnDisplay(my.qt+my.qtPause);
         };
         this.run = function(){
-//            console.log(my.pauseWatch);
             if(my.pauseWatch){
-               // if(!my.startTime){
-                    my.startTime = Date.now();
-                //}
+                my.startTime = Date.now();
                 my.idWatch = setInterval(my.countTime, 1);
                 my.pauseWatch = false;
                 return "Running";
@@ -86,29 +82,27 @@
             }
         };
     }
-
     var stopWatch2 = new StopWatch();
     var btnStartStop = document.querySelector('#btnStartStop');
     var btnReset = document.querySelector('#btnReset');
     var recWatch = 'Run';
-
     btnStartStop.addEventListener('click', function(){
         if(recWatch === 'Run'){
             btnStartStop.setAttribute('value','Pause' );
             recWatch = stopWatch2.run();
-//            console.log(recWatch);
         }else{
             recWatch = stopWatch2.pause();
-//            console.log(recWatch);
             btnStartStop.setAttribute('value', 'Run');
         }
-
     });
 
     btnReset.addEventListener('click', function(){
+        recWatch = stopWatch2.pause();
+
         if(recWatch!=='Running'){
             stopWatch2.clear();
             recWatch = 'Run';
         }
+        btnStartStop.setAttribute('value', 'Start');
     });
 })();

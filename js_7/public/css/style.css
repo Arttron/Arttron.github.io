@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #ffffff;
+}
+#tabBox{
+    width: 35%;
+    background-color: #c3c4c7;
+    border: 1px solid #515151;
+}
+.tabBox__item{
+    margin: 0 10px 10px;
+    padding: 5px;
+    background-color: #fefefe;
+    border: 1px solid;
+    border-top: none;
+}
+#tabBox__head{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 5px 10px 0;
+
+}
+#tabBox__head li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /*visibility: hidden;*/
+}
+.tabBox__link{
+    padding: 5px;
+}
+#tabBox__head .active{
+    border: 1px solid #515151;
+    border-bottom: none;
+    background-color: #fefefe;
+
+}

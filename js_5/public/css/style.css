@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Geostar+Fill|Press+Start+2P');
+
+
+
 *{
     margin: 0;
     padding: 0;
 }
 body {
     background: #ffffff;
+    font-family: 'Geostar Fill', cursive;
 }
 .wrapper{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .head{
 
@@ -20,4 +27,8 @@ input[type=button]{
 }
 #disdlay span{
     min-width: 10px;
+}
+#disdlay{
+    margin: 15px 0;
+    font-family: 'Press Start 2P', cursive;
 }
