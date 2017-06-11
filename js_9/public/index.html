@@ -14,10 +14,12 @@
     <ul class="menu__container">
         <li class="menu__item"><a href="#">Item 1</a></li>
         <li class="menu__item"><a href="#">Item 2</a>
+            <span class="menu__item-sub"></span>
             <ul class="menu__submenu menu__submenu-hidden">
                 <li class="submenu__item"><a href="#">subitem 1</a></li>
                 <li class="submenu__item"><a href="#">subitem 2</a></li>
-                <li class="submenu__item "><a href="#">subitem 3></a>
+                <li class="submenu__item menu__item-submenu"><a href="#">subitem 3</a>
+                    <span class="menu__item-sub-right"></span>
                     <ul class="menu__submenu menu__submenu2 menu__submenu-hidden">
                         <li class="submenu__item"><a href="#">subitem 1</a></li>
                         <li class="submenu__item"><a href="#">subitem 2</a></li>
@@ -32,7 +34,8 @@
                 <li class="submenu__item"><a href="#">subitem 6</a></li>
             </ul></li>
         <li class="menu__item"><a href="#">Item 3</a></li>
-        <li class="menu__item"><a href="#">Item 4</a>
+        <li class="menu__item menu__item-submenu menu__item-submenu"><a href="#">Item 4</a>
+            <span class="menu__item-sub"></span>
             <ul class="menu__submenu menu__submenu-hidden">
                 <li class="submenu__item"><a href="#">subitem 1</a></li>
                 <li class="submenu__item"><a href="#">subitem 2</a></li>
@@ -41,6 +44,7 @@
                 <li class="submenu__item"><a href="#">subitem 5</a></li>
             </ul></li>
         <li class="menu__item"><a href="#">Item 5</a>
+            <span class="menu__item-sub"></span>
             <ul class="menu__submenu menu__submenu-hidden">
                 <li class="submenu__item"><a href="#">subitem 1</a></li>
                 <li class="submenu__item"><a href="#">subitem 2</a></li>
@@ -51,10 +55,11 @@
 </nav>
 <div class="body__checkbox">
     <label class="check__css" for="ch__css"><input name="ch__css" id="ch__css" type="checkbox"/><span class="check__castom-css" ></span>css style</label>
-    <label class="check__css" for="ch__css4"><input name="ch__css" id="ch__css4" type="checkbox"/><span class="check__castom-css" ></span>css style</label>
+    <label class="check__css" for="ch__css4"><input name="ch__css" id="ch__css4" type="checkbox" disabled checked/><span class="check__castom-css" ></span>css style</label>
+    <label class="check__css" for="ch__css5"><input name="ch__css" id="ch__css5" type="checkbox" checked/><span class="check__castom-css" ></span>css style</label>
     <label class="check__js-label" for="ch__js"><input class="check__js" name="ch__js" id="ch__js" type="checkbox"/>Jquery style</label>
-    <label class="check__js-label" for="ch__js1"><input class="check__js" name="ch__js" id="ch__js1" type="checkbox"/>Jquery style</label>
-    <label class="check__js-label" for="ch__js2"><input class="check__js" name="ch__js" id="ch__js2" type="checkbox"/>Jquery style</label>
+    <label class="check__js-label" for="ch__js1"><input class="check__js" name="ch__js" id="ch__js1" type="checkbox" checked/>Jquery style</label>
+    <label class="check__js-label" for="ch__js2"><input class="check__js" name="ch__js" id="ch__js2" type="checkbox" checked disabled/>Jquery style</label>
     <label class="check__js-label" for="ch__js3"><input class="check__js" name="ch__js" id="ch__js3" type="checkbox"/>Jquery style</label>
 </div>
 <div class="jcarousel-wrapper">

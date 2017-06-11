@@ -6,7 +6,7 @@
             function () {
                 $(this).children('.menu__submenu').animate({
                     height: "toggle",
-                    backgroundColor: "#bada55"
+                    backgroundColor: "#ccc"
                 }, 300);
             },
             function () {
@@ -19,10 +19,7 @@
     }
     //*************checkbox**********
 {
-    $('.check__js').each(function () {
-        $(this).hide();
-        return true;
-    });
+
     $('.check__js-label').each(function (item) {
         var $s = document.createElement('span');
         $($s).addClass('check__castom-js');
@@ -30,7 +27,18 @@
             position: 'relative',
            marginLeft: '10px'
         });
+        $('.check__js').each(function () {
+            $(this).hide();
+            if($(this).prop("checked")){
+                $(this).parent().children('span').addClass('ch__js-checked');
+            }
+            console.log($(this).prop("disabled"));
+            if($(this).prop("disabled")){
 
+                $(this).parent().children('span').removeClass('ch__js-checked').addClass('ch__js-checked-disabled');
+            }
+            return true;
+        });
 
         $(this).prepend($($s));
         return true;
