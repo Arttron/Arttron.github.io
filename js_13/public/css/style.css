@@ -5,6 +5,9 @@ body {
 
 .body{
     position: relative;
+    width: 80vw;
+    margin: auto;
+    padding: 15px 0;
 }
 #popup{
     display: flex;
