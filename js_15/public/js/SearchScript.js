@@ -10,6 +10,9 @@
     var resultContainer = document.querySelectorAll(".search-result");
     var currentQuery = "", page = 1;
     function renderTemplate(data) {
+
+        var blockRes = document.querySelector("#blockRes");
+        blockRes.classList.remove("hidden-block");
         var source = document.querySelector("#entry-template").innerHTML;
         var template = Handlebars.compile(source);
         window.scrollTo(0, resultContainer["0"].offsetTop);
@@ -30,7 +33,6 @@
             if (pixaBayHTTP.readyState == 4) {
                 if (pixaBayHTTP.status == 200) {
                     renderTemplate(JSON.parse(pixaBayHTTP.responseText));
-
                 }
             }
         };
@@ -60,7 +62,7 @@
         return false;
     });
     buttonSearch.addEventListener("click", function() {
-        if (!textInput.value) {
+        if (!textInput.value){
             alert("Enter your query");
         } else {
             currentQuery = textInput.value;
