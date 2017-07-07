@@ -1,6 +1,6 @@
 /*********************** buttonBar variables ****************/
-/**************** COLORS *******************/
-@media (max-width: 768px) {
+/**************** COLORS ******3*************/
+@media (max-width: 767px) {
   .navMenu {
     display: flex;
     flex-direction: column;
@@ -9,15 +9,6 @@
     margin-top: 90px;
     position: relative;
     height: 122px;
-  }
-  .Menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-family: LeagueGothicR;
-    position: absolute;
   }
   .Menu:hover {
     overflow: hidden;

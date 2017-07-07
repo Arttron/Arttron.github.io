@@ -1,5 +1,5 @@
 /*********************** buttonBar variables ****************/
-/**************** COLORS *******************/
+/**************** COLORS ******3*************/
 @media (min-width: 768px) {
   .header {
     box-sizing: border-box;
@@ -26,6 +26,7 @@
   .main-content__cover {
     flex-direction: row;
     justify-content: space-around;
+    align-items: baseline;
   }
   .text-480use {
     display: inline;
@@ -34,13 +35,10 @@
     width: 80%;
   }
   .Menu {
-    padding-right: 120px;
+    width: 80%;
     flex-direction: row;
     position: relative;
     justify-content: space-between;
-  }
-  .Menu__ferst-item {
-    border-bottom: 3px solid transparent;
   }
   .Menu__item {
     display: list-item;
@@ -48,9 +46,6 @@
   .slider {
     padding-left: 20px;
     padding-right: 20px;
-  }
-  .slider__img {
-    width: 45%;
   }
   .slider__text {
     width: 30%;
@@ -66,11 +61,29 @@
     height: 6rem;
     overflow: hidden;
   }
-  .footer__fooBox {
+  .testimonials__cover {
+    margin-top: 15px;
+    min-height: 315px;
+  }
+  .testimonials__text {
+    min-height: 13rem;
+  }
+  .logos__wrap {
+    width: 100%;
+  }
+  .logos__item {
+    width: 5vw;
+  }
+  .footer .fooBox__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .footer__copyR {
+    display: flex;
+    align-self: flex-end;
+    margin: 20px 20px 0 0;
   }
   .fooBox {
     width: 200px;
@@ -80,6 +93,7 @@
     height: 8.4rem;
   }
   .foo__menu {
-    width: 80%;
+    width: 70%;
+    justify-content: space-between;
   }
 }

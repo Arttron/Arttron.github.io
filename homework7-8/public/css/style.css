@@ -1,5 +1,5 @@
 /*********************** buttonBar variables ****************/
-/**************** COLORS *******************/
+/**************** COLORS ******3*************/
 @font-face {
   font-family: OpenSansR;
   src: url("../fonts/Open_Sans/OpenSansRegular.woff") format("woff");
@@ -22,6 +22,12 @@ body {
   display: none;
 }
 
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .wrapper {
   box-sizing: border-box;
   display: flex;
@@ -29,6 +35,8 @@ body {
   align-items: center;
   background-color: #f9f9f9;
   width: 100vw;
+  min-width: 320px;
+  margin: 0 auto;
 }
 
 .bg-container {
@@ -123,13 +131,14 @@ body {
   align-items: center;
   margin-top: 120px;
   margin-bottom: 67px;
+  width: 100%;
 }
 
 .slider__content {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 80px;
 }
@@ -199,6 +208,8 @@ body {
 
 .slider__img {
   display: none;
+  max-height: 365px;
+  width: auto;
 }
 
 .slider__text-p {
@@ -338,6 +349,7 @@ body {
   box-sizing: border-box;
   color: #454545;
   padding: 50px 20px 90px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -399,7 +411,8 @@ body {
   position: relative;
   z-index: 10;
   width: 100%;
-  box-shadow: 0 3px 5px #656363;
+  box-sizing: border-box;
+  box-shadow: -5px 3px 5px #656363;
   border-top: 1px solid #fefefe;
   display: flex;
   align-items: center;
@@ -425,6 +438,12 @@ body {
 }
 
 /************************ Footer ************************/
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__navCopy {
   background-image: url("../img/bg_bootom.png");
   background-repeat: no-repeat;
@@ -453,8 +472,8 @@ body {
 }
 
 /*********************** buttonBar variables ****************/
-/**************** COLORS *******************/
-@media (max-width: 768px) {
+/**************** COLORS ******3*************/
+@media (max-width: 767px) {
   .navMenu {
     display: flex;
     flex-direction: column;
@@ -463,15 +482,6 @@ body {
     margin-top: 90px;
     position: relative;
     height: 122px;
-  }
-  .Menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-family: LeagueGothicR;
-    position: absolute;
   }
   .Menu:hover {
     overflow: hidden;
@@ -521,7 +531,7 @@ body {
 }
 
 /*********************** buttonBar variables ****************/
-/**************** COLORS *******************/
+/**************** COLORS ******3*************/
 @media (min-width: 480px) {
   .text-480use {
     display: inline;
@@ -551,10 +561,11 @@ body {
     width: 25vw;
   }
   .footer__fooBox {
+    box-sizing: border-box;
     padding-top: 25px;
     padding-bottom: 90px;
     position: relative;
-    box-shadow: 0 3px 5px #656363;
+    box-shadow: -5px 3px 5px #656363;
     border-top: 1px solid #fefefe;
     z-index: 9;
   }
@@ -563,6 +574,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     padding: 45px 20px 0;
   }
   .foo__menu-item {
@@ -601,7 +613,7 @@ body {
 }
 
 /*********************** buttonBar variables ****************/
-/**************** COLORS *******************/
+/**************** COLORS ******3*************/
 @media (min-width: 768px) {
   .header {
     box-sizing: border-box;
@@ -628,6 +640,7 @@ body {
   .main-content__cover {
     flex-direction: row;
     justify-content: space-around;
+    align-items: baseline;
   }
   .text-480use {
     display: inline;
@@ -636,13 +649,10 @@ body {
     width: 80%;
   }
   .Menu {
-    padding-right: 120px;
+    width: 80%;
     flex-direction: row;
     position: relative;
     justify-content: space-between;
-  }
-  .Menu__ferst-item {
-    border-bottom: 3px solid transparent;
   }
   .Menu__item {
     display: list-item;
@@ -650,9 +660,6 @@ body {
   .slider {
     padding-left: 20px;
     padding-right: 20px;
-  }
-  .slider__img {
-    width: 45%;
   }
   .slider__text {
     width: 30%;
@@ -668,11 +675,29 @@ body {
     height: 6rem;
     overflow: hidden;
   }
-  .footer__fooBox {
+  .testimonials__cover {
+    margin-top: 15px;
+    min-height: 315px;
+  }
+  .testimonials__text {
+    min-height: 13rem;
+  }
+  .logos__wrap {
+    width: 100%;
+  }
+  .logos__item {
+    width: 5vw;
+  }
+  .footer .fooBox__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .footer__copyR {
+    display: flex;
+    align-self: flex-end;
+    margin: 20px 20px 0 0;
   }
   .fooBox {
     width: 200px;
@@ -682,6 +707,36 @@ body {
     height: 8.4rem;
   }
   .foo__menu {
-    width: 80%;
+    width: 70%;
+    justify-content: space-between;
+  }
+}
+
+/*********************** buttonBar variables ****************/
+/**************** COLORS ******3*************/
+@media (min-width: 960px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header__logo {
+    margin-top: 10px;
+  }
+  .navMenu {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__copyR {
+    margin: 0;
+    align-self: flex-end;
+  }
+  .foo__menu-wrapper {
+    width: auto;
+    flex-grow: 1;
   }
 }
