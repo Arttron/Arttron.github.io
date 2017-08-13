@@ -1,0 +1,378 @@
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'MontserratB';
+  /* Имя шрифта */
+  src: url(../fonts/Montserrat-Bold.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'MontserratR';
+  /* Имя шрифта */
+  src: url(../fonts/Montserrat-Regular.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'RobotoL';
+  /* Имя шрифта */
+  src: url(../fonts/Roboto-Light.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+@media (max-width: 780px) {
+  header {
+    width: 100%;
+    height: 540px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: url("../img/promo.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  header .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  header .login__link {
+    font-size: .75rem;
+    height: 20px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  header .login__link:hover {
+    border: 2px solid #fff;
+  }
+  header .promo {
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  }
+  header .promo__head {
+    font-size: 1.25rem;
+  }
+  header .promo__tag {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+  }
+  header .promo__text {
+    margin: 0 auto;
+    width: 70%;
+  }
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main .step__sliders {
+    min-height: 730px;
+    position: relative;
+  }
+  main .ideas .grid {
+    width: 100%;
+    /* fluid 5 columns */
+    /* 2 columns wide */
+  }
+  main .ideas .grid .grid-item {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 8.33333%;
+    margin-top: 10px;
+    float: none;
+    height: 200px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  main .ideas .grid .grid-item img {
+    width: 100%;
+    height: 100%;
+  }
+  main .ideas .grid .grid-sizer,
+  main .ideas .grid .grid-item {
+    width: 83.33333%;
+  }
+  main .ideas .grid .grid-item--width2 {
+    width: 83.33333%;
+  }
+  main .js_slider li, main .js_slider-one li, main .js_slider-two li {
+    height: 240px;
+  }
+}
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'MontserratB';
+  /* Имя шрифта */
+  src: url(../fonts/Montserrat-Bold.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'MontserratR';
+  /* Имя шрифта */
+  src: url(../fonts/Montserrat-Regular.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'RobotoL';
+  /* Имя шрифта */
+  src: url(../fonts/Roboto-Light.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-size: 16px;
+  font-family: MontserratB;
+}
+
+.font-monserat-regular {
+  font-family: MontserratR;
+}
+
+.font-roboto-light {
+  font-family: RobotoL;
+}
+
+.font-monserat-bold {
+  font-family: MontserratB;
+}
+
+/**
+            * (optional) define here the style definitions which should be applied on the slider container
+            * e.g. width including further controls like arrows etc.
+            */
+.js_slider, .js_slider-one, .js_slider-two {
+  width: 100%;
+}
+
+.js_slider .slider, .js_slider-one .slider, .js_slider-two .slider {
+  position: relative;
+}
+
+.js_slider .frame, .js_slider-one .frame, .js_slider-two .frame {
+  /**
+       * (optional) wrapper width, specifies width of the slider frame.
+       */
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.js_slider .slides, .js_slider-one .slides, .js_slider-two .slides {
+  display: inline-block;
+}
+
+.js_slider li, .js_slider-one li, .js_slider-two li {
+  z-index: 2;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  height: 240px;
+  margin: 5px auto;
+  overflow: hidden;
+  border-radius: 5px;
+  /**
+       * (optional) if the content inside the slide element has a defined size.
+       */
+  width: 100%;
+}
+
+.js_slider li img, .js_slider-one li img, .js_slider-two li img {
+  margin-top: -75px;
+  margin-left: -105px;
+  width: 150%;
+}
+
+.js_slider .js_slider-text, .js_slider-one .js_slider-text, .js_slider-two .js_slider-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50px;
+  z-index: 10;
+  white-space: normal;
+  color: #ffffff;
+}
+
+.js_slider .js_slider-text__step, .js_slider-one .js_slider-text__step, .js_slider-two .js_slider-text__step {
+  letter-spacing: 5px;
+  display: inline-block;
+  background-color: #ff4e50;
+  font-family: MontserratR;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  padding: 0 10px;
+  border-radius: calc(1.25rem / 2 + 5px);
+}
+
+.js_slider .js_slider-text__head, .js_slider-one .js_slider-text__head, .js_slider-two .js_slider-text__head {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.js_slider .js_slider-text__desc, .js_slider-one .js_slider-text__desc, .js_slider-two .js_slider-text__desc {
+  text-align: left;
+  font-family: RobotoL;
+  font-size: 0.875rem;
+}
+
+.js_slider .prev, .js_slider .next, .js_slider-one .prev, .js_slider-one .next, .js_slider-two .prev, .js_slider-two .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  display: block;
+  cursor: pointer;
+}
+
+.js_slider .next, .js_slider-one .next, .js_slider-two .next {
+  right: 0;
+}
+
+.js_slider .prev, .js_slider-one .prev, .js_slider-two .prev {
+  left: 0;
+}
+
+.js_slider .next svg, .js_slider .prev svg, .js_slider-one .next svg, .js_slider-one .prev svg, .js_slider-two .next svg, .js_slider-two .prev svg {
+  width: 25px;
+}
+
+.slider-img {
+  width: 100%;
+}
+
+.grid {
+  background-color: yellow;
+  /* fluid 5 columns */
+  /* 2 columns wide */
+}
+
+.grid .grid-item {
+  margin-top: 10px;
+  background-color: green;
+  float: left;
+  height: 60px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.grid .grid-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid .grid-sizer,
+.grid .grid-item {
+  width: 20%;
+}
+
+.grid .grid-item--width2 {
+  width: 40%;
+}
+
+.link-button {
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: #FFF8F8;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 66.10169%;
+  height: 30px;
+  border-radius: 15px;
+  display: block;
+  background-color: #FF4E50;
+  text-align: center;
+}
+
+.partner__partners {
+  position: relative;
+}
+
+.partner__partners__img-con {
+  position: relative;
+}
+
+.partner__partners__avatar {
+  width: 49.15254%;
+  margin: 15px 23.72881%;
+  border-radius: 50%;
+}
+
+.partner__partners__pic {
+  position: absolute;
+  z-index: 1;
+  top: 55%;
+  left: 55%;
+  width: 15.25424%;
+  height: 15.25424%;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background-color: red;
+}
+
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'MontserratB';
+  /* Имя шрифта */
+  src: url(../fonts/Montserrat-Bold.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'MontserratR';
+  /* Имя шрифта */
+  src: url(../fonts/Montserrat-Regular.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'RobotoL';
+  /* Имя шрифта */
+  src: url(../fonts/Roboto-Light.ttf);
+  /* Путь к файлу со шрифтом */
+}

@@ -1,0 +1,47 @@
+/*********************** buttonBar variables ****************/
+/**************** COLORS ******3*************/
+@media (min-width: 960px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .header__logo {
+    margin-top: 10px;
+  }
+  .navMenu {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .footer__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  .footer__foo-box {
+    width: auto;
+  }
+  .footer__copyR {
+    margin: 0;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+  .foo__menu-wrapper {
+    width: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}

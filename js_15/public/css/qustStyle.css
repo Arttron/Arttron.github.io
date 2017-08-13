@@ -72,15 +72,25 @@ body {
     padding: 15px;
 }
 .adminPanel h2{
-    display: flex;
-    flex: 1 100%;
-    justify-content: center;
+    border-left:2px solid  #000 ;
+    border-right:2px solid  #000 ;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+
 }
+.adminPanel_container{
+    display: flex;
+    justify-content: center;
+    flex: 1 auto;
+}
+
 .adminPanel{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .inputQuestion{
     display: flex;
     flex: 1 100%;

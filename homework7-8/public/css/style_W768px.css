@@ -2,10 +2,13 @@
 /**************** COLORS ******3*************/
 @media (min-width: 768px) {
   .header {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
   .text-480use {
@@ -15,6 +18,9 @@
     display: block;
   }
   .blurbs__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   .blurbs__cover {
@@ -24,8 +30,14 @@
     width: 33%;
   }
   .main-content__cover {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
   }
   .text-480use {
@@ -36,9 +48,17 @@
   }
   .Menu {
     width: 80%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     position: relative;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+  .Menu__link {
+    padding-bottom: 2px;
   }
   .Menu__item {
     display: list-item;
@@ -74,26 +94,41 @@
   .logos__item {
     width: 5vw;
   }
-  .footer .fooBox__container {
+  .footer .foo-box__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .footer__copyR {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-item-align: end;
     align-self: flex-end;
     margin: 20px 20px 0 0;
   }
-  .fooBox {
-    width: 200px;
+  .foo-box {
+    width: auto;
+    padding: 0 30px;
   }
-  .fooBox__text {
+  .foo-box__text {
     line-height: 1.2rem;
     height: 8.4rem;
   }
   .foo__menu {
     width: 70%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
