@@ -143,26 +143,16 @@
         <p class="ff_bold">Lorem ipsum dolor sit amet.</p>
 
         <p class="ff_norm">Lorem ipsum dolor sit amet.</p>
-        <div class="ideas__api-img">
-            <div class="grid">
-                <div class="grid-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB9sgL1UeLDD9Jz2iiuvrZgr4mlT4SnMhtZGzIqY4rXwENN_BWMQ" alt=""/></div>
-                <div class="grid-item"><img src="http://www.sunhome.ru/i/wallpapers/111/gorod-na-vode-v2.orig.jpg" alt=""/></div>
-                <div class="grid-item grid-sizer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/City_Of_Capitals_20th_October_2012.JPG/300px-City_Of_Capitals_20th_October_2012.JPG" alt=""/></div>
-                <div class="grid-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1hY8w20e9iCrECsLW64q0xv_nSrmrEAA2M-hIpkdAjoqfeTLNTg" alt=""/></div>
-                <div class="grid-item grid-item--width2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Z5z9a4WGzfUO9GYNSoPFAFfZRo47uf_xtCcTtLjpzrMrRJtfug" alt=""/></div>
-                <div class="grid-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYaZpgY5xomemUXmmfNghvi8dJLAdCLN252_0bnJ5Kr9ptkuy" alt=""/></div>
-                <div class="grid-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdarTLpk4Sev4UcuS5XRi5m9WL3z7OKOcWL_ZVBOIqhygrBVFa" alt=""/></div>
-                <div class="grid-item grid-item--width2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkn2YAt5Ib5fW8TOPE72v5JjE-SCxSLLeqfUCQdMBPyc-ubH6hPg" alt=""/></div>
-                <div class="grid-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg-DgIonlraJQgCfw4bJ2yOxhDzZBCeylLlmqokTC_553isiAV6w" alt=""/></div>
-            </div>
+        <div class="ideas__api-img grid" id="ideas__api-img">
+
         </div>
     </section>
     <section class="search">
         <h2 class="search__head">Discover holiday activity ideas</h2>
         <p class="search__text">Hi! What are your holiday interests?</p>
-        <input type="text" placeholder="Enter your interests"/>
+        <input type="text" placeholder="Enter your interests" id="search__input"/>
         <!--<input class="link-button" type="button" value="Search partners"/>-->
-        <a href="#" class="link-button">Search partners</a>
+        <a href="#" id="search__button" class="link-button">Search partners</a>
     </section>
 </main>
 <footer>
@@ -182,6 +172,24 @@
             <p class="partner__partners__name"><%- name.firstName %> <%- name.lastName %></p>
                 <p class="partner__partners__comment"><%- name.comment %></p>
 
+    <% }); %>
+
+</script>
+<script type="text/template" id="IdeasTemplate">
+    <%
+    var i=0;
+    _.forEach(hits, function(name) {%>
+    <% if (i == 2){%>
+        <div class="grid-item grid-sizer ideas__item" >
+    <%} else if(i == 4 || i==6){%>
+        <div class="grid-item grid-item--width2 ideas__item" >
+    <%} else {%>
+        <div class="grid-item ideas__item" >
+    <% }
+     i++; %>
+        <img class="ideas__img" src="<%- name.webformatURL %>" alt=""/>
+        <p class="ideas__comment"><%- name.tags %></p>
+    </div>
     <% }); %>
 
 </script>
