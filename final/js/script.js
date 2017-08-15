@@ -1,7 +1,5 @@
 'use strict';
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 ////= lory.min.js
 /**
  * Created by User on 09.08.2017.
@@ -29,6 +27,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * Created by User on 14.08.2017.
  */
 (function () {
+    var randomSearch = ["glass", "animal", "green", "city", "yellow", "red", "flower", "sky", "summer"];
+    var requestSend = 0;
     function pixaBayRequest() {
         var query = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "city";
         var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
@@ -40,7 +40,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         pixaBayHTTP.onreadystatechange = function () {
             if (pixaBayHTTP.readyState == 4) {
                 if (pixaBayHTTP.status == 200) {
-                    console.log(JSON.parse(pixaBayHTTP.responseText));
+
                     renderIdeasTenplate(JSON.parse(pixaBayHTTP.responseText));
                     var grid = document.querySelector('.grid');
                     var msnry = new Masonry(grid, {
@@ -49,7 +49,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         // do not use .grid-sizer in layout
                         itemSelector: '.grid-item',
                         percentPosition: true,
-                        gutter: 10
+                        gutter: '.grid-gutter'
                     });
                 }
             }
@@ -61,46 +61,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var reg = /^[\w \ ]+/g;
         var i = 0;
         _.forEach(data.hits, function (item) {
-            console.log(item.tags.match(reg)[0]);
             data.hits[i].tags = item.tags.match(reg)[0];
             i++;
         });
         var partnersTmpl = _.template(document.querySelector("#IdeasTemplate").innerText);
         document.querySelector("#ideas__api-img").innerHTML = partnersTmpl(data);
     }
-    pixaBayRequest();
+    pixaBayRequest(randomSearch[_.random(0, 8)]);
     var searchBtn = document.querySelector("#search__button");
     var searchText = document.querySelector('#search__input');
 
     searchBtn.addEventListener("click", function (event) {
         event.preventDefault();
-        console.log(searchText.value);
-        pixaBayRequest(searchText.value);
+
+        if (!requestSend) {
+            setTimeout(function () {
+                requestSend = 0;
+            }, 2000);
+            pixaBayRequest(searchText.value);
+            requestSend = 1;
+        }
     });
 })();
 'use strict';
 (function (document) {
-    var Parent = function Parent() {
-        _classCallCheck(this, Parent);
-
-        console.log('create class');
-    };
-
-    var p = new Parent();
-    var a = new Parent();
-    var b = new Parent();
     function myJsonRequest() {
-        var ID = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '1empk9';
+        var ID = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '1d1pv5';
 
         var serchRes = {};
-        var key = "";
         var myJsonHTTP = new XMLHttpRequest();
         myJsonHTTP.open("GET", 'https://api.myjson.com/bins/' + ID, true);
         myJsonHTTP.send();
-        setTimeout(function () {
-
-            console.log(myJsonHTTP.statusText);
-        }, 3000);
         myJsonHTTP.onreadystatechange = function () {
 
             if (myJsonHTTP.readyState == 4) {
@@ -115,7 +106,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
     function renderTenplate(data) {
         var partnersTmpl = _.template(document.querySelector("#PartnersTemplate").innerText);
-        console.log(data);
         document.querySelector("#partners-cont").innerHTML = partnersTmpl(data);
     }
     myJsonRequest();
