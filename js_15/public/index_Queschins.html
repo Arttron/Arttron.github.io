@@ -16,15 +16,17 @@
        </div>
         <div class="inputQuestion adminPanel__block">
             <p><label for="textQuestion">Вопрос:</label></p>
-            <textarea name="Question" id="textQuestion" rows="5"></textarea>
+            <input name="Question" id="textQuestion">
         </div>
         <div class="inputAnswer adminPanel__block">
             <p><label for="inputAnswer-text">Вариант ответа:</label></p>
             <input type="text" id="inputAnswer-text"/>
-            <input type="button" value="Добавить ответ"/>
+            <input id="addAnswerBtn" type="button" value="Добавить ответ"/>
+            <div id="addedAnswer"></div>
+            <input type="button" value="Записать результат" id="addQuestion"/>
         </div>
         <div class="addAnswers adminPanel__block">
-
+            <p>Вопросы:</p>
         </div>
     </div>
     <div class="body">

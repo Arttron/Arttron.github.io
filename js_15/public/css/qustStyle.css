@@ -107,3 +107,7 @@ body {
     width: 100%;
 
 }
+#addedAnswer{
+    overflow: scroll;
+    max-height: 150px;
+}

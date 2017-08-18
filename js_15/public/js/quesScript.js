@@ -2,7 +2,6 @@
  * Created by User on 02.07.2017.
  */
 'use strict';
-
 var test =[{
     title: 'Тест по физике',
     questions: [
@@ -28,9 +27,7 @@ var test =[{
         }
     ]}
     ];
-class test{
 
-}
 window.localStorage.setItem("test", JSON.stringify(test));
 test={};
 console.log('очистил объект тест'+' test='+test.questions);
@@ -105,3 +102,52 @@ ansBtn.addEventListener("click", function() {
 popup.addEventListener('click',function(){
     popup.setAttribute('style','');
 });
+
+var addAnswerBtn = document.querySelector("#addAnswerBtn");
+var answerOut = document.querySelector("#addedAnswer");
+var answerOutArrEl = [];
+var answerArr = [];
+var ansUl = document.createElement('ol');
+addAnswerBtn.addEventListener('click',()=>{
+    answerArr.push(document.querySelector("#inputAnswer-text").value);
+    document.querySelector("#inputAnswer-text").value="";
+    var ansLi = document.createElement('li');
+    var checkBox = document.createElement("input");
+    checkBox.setAttribute("style","margin-left: 10px;");
+    checkBox.setAttribute("type","checkbox");
+    ansLi.innerText = answerArr[answerArr.length-1];
+    ansLi.appendChild(checkBox);
+
+    ansUl.appendChild(ansLi);
+    answerOut.appendChild(ansUl);
+});
+
+
+
+class test{
+
+    title: 'Тест по физике';
+    questions: [
+{
+    title: 'Сколько существует основных законов Ньютона',
+    answers: ['10', '5', '3', '4'],
+    correctAnswers: [3]
+},
+{
+    title: 'Формула эквивалентности массы',
+        answers: ['E = ms2', 'E = mc2', 'E = nc2', 'V = U/R'],
+    correctAnswers: [2]
+},
+{
+    title: 'Законы Ома (правильны два варианта)',
+    answers: ['I = U/R', 'U = IR', 'U = R + I', 'R = I/U'],
+    correctAnswers: [1, 2]
+},
+{
+    title: ' деформация, возникающая в упругом теле (пружине, стержне, консоли, балке и т. п.), пропорциональна приложенной к этому телу силе',
+        answers: ['Закон Кука', 'Закон Мука', 'Закон Гука'],
+    correctAnswers: [3]
+}
+]}
+
+}
