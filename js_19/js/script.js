@@ -64,8 +64,9 @@
     xhttp.open("GET", "./js/data.json", true);
     xhttp.send();
     function dataFilter(jsonData) {
-        _.sortBy(jsonData, ['name', 'friends.id']);
-        console.log(jsonData);
+        jsonData = _.sortBy(jsonData, function (o) {
+            return o.friends.length;
+        });
         _.map(jsonData, function (arr) {
             skillsOut = _.concat(skillsOut, arr.skills);
             namesOut = _.concat(namesOut, arr.name);
@@ -83,5 +84,6 @@
         console.log("Skills: " + skillsOut.length + " " + skillsOut);
         console.log("Names: " + namesOut.length + " " + namesOut);
         console.log("Friends: " + friendsOut.length + " " + friendsOut);
+        alert("Names:\nQuantity: " + namesOut.length + " \n" + namesOut + '\n\n' + "Friends:\nQuantity: " + friendsOut.length + " \n" + friendsOut + '\n\n' + "Skills:\nQuantity: " + skillsOut.length + skillsOut);
     }
 })(jQuery, _);
